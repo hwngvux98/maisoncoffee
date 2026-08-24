@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand colors */
+  --green-900: #12301a;
+  --green-800: #173a20;
+  --green-700: #1e4a2a;
+  --green-600: #245b33;
+  --green-500: #2f8c3b;
+  --green-400: #4fa652;
+  --green-200: #bfe0be;
+  --green-100: #e3f0e1;
+
+  --cream-050: #fbf8ec;
+  --cream-100: #f6f0dd;
+  --cream-200: #efe6c9;
+
+  --gold-300: #f4c978;
+  --gold-500: #eda83d;
+  --gold-600: #d6922c;
+  --gold-700: #b0761f;
+
+  --flag-red: #da251c;
+  --flag-yellow: #ffcd00;
+
+  --ink-900: #1b211a;
+  --ink-700: #3a4238;
+  --ink-500: #6b7568;
+  --ink-300: #a2ab9b;
+
+  --line: rgba(27, 33, 26, 0.12);
+  --line-strong: rgba(27, 33, 26, 0.24);
+  --line-inverse: rgba(251, 248, 236, 0.24);
+
+  --shadow-color-sm: 27, 33, 26;
+  --shadow-color-md: 20, 40, 24;
+  --shadow-color-lg: 20, 40, 24;
+}
+
+@theme inline {
+  --color-green-900: var(--green-900);
+  --color-green-800: var(--green-800);
+  --color-green-700: var(--green-700);
+  --color-green-600: var(--green-600);
+  --color-green-500: var(--green-500);
+  --color-green-400: var(--green-400);
+  --color-green-200: var(--green-200);
+  --color-green-100: var(--green-100);
+
+  --color-cream-050: var(--cream-050);
+  --color-cream-100: var(--cream-100);
+  --color-cream-200: var(--cream-200);
+
+  --color-gold-300: var(--gold-300);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
+  --color-gold-700: var(--gold-700);
+
+  --color-flag-red: var(--flag-red);
+  --color-flag-yellow: var(--flag-yellow);
+
+  --color-ink-900: var(--ink-900);
+  --color-ink-700: var(--ink-700);
+  --color-ink-500: var(--ink-500);
+  --color-ink-300: var(--ink-300);
+
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-line-inverse: var(--line-inverse);
+
+  /* Fonts */
+  --font-display: var(--font-young-serif), ui-serif, Georgia, serif;
+  --font-label: var(--font-reglo), ui-sans-serif, sans-serif;
+  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+
+  /* Type scale */
+  --text-display-xl: clamp(3.5rem, 3rem + 3vw, 6.5rem);
+  --text-display-xl--line-height: 1.05;
+  --text-display-lg: clamp(2.75rem, 2.4rem + 2vw, 4.5rem);
+  --text-display-lg--line-height: 1.05;
+  --text-display-md: clamp(2rem, 1.8rem + 1vw, 3rem);
+  --text-display-md--line-height: 1.05;
+  --text-heading-lg: 2rem;
+  --text-heading-lg--line-height: 1.25;
+  --text-heading-md: 1.5rem;
+  --text-heading-md--line-height: 1.25;
+  --text-body-lg: 1.15rem;
+  --text-body-lg--line-height: 1.7;
+  --text-body-md: 1rem;
+  --text-body-md--line-height: 1.7;
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.7;
+  --text-label-sm: 0.78rem;
+  --text-label-sm--line-height: 1.25;
+
+  /* Leading */
+  --leading-tight: 1.05;
+  --leading-snug: 1.25;
+  --leading-relaxed: 1.7;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Shadows (green-tinted, never neutral black) */
+  --shadow-sm: 0 1px 2px rgba(27, 33, 26, 0.06), 0 1px 1px rgba(27, 33, 26, 0.04);
+  --shadow-md: 0 6px 16px rgba(20, 40, 24, 0.1), 0 2px 6px rgba(20, 40, 24, 0.06);
+  --shadow-lg: 0 16px 40px rgba(20, 40, 24, 0.16), 0 4px 12px rgba(20, 40, 24, 0.08);
+
+  /* Motion */
+  --ease-brand: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  background: var(--cream-100);
+  color: var(--ink-900);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--green-200);
+  color: var(--green-900);
+}
+
+:focus-visible {
+  outline: 2px solid var(--green-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-label-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
