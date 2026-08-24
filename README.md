@@ -18,7 +18,7 @@ Copy `.env.example` to `.env.local` and fill in:
 | Variable | Required for | Notes |
 | --- | --- | --- |
 | `RESEND_API_KEY` | `/api/wholesale` route | Sends the wholesale sample-kit request email via [Resend](https://resend.com). Without it the form returns a real error state (the failure path is intentional, not a bug). |
-| `NEXT_PUBLIC_SITE_URL` | SEO metadata, sitemap, JSON-LD | Falls back to `https://maisoncoffee.vn` — set this to the real production domain once assigned. |
+| `NEXT_PUBLIC_SITE_URL` | SEO metadata, sitemap, JSON-LD | Falls back to `https://maisoncoffeevn.com`, the production domain. |
 
 ## Structure
 
