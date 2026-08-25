@@ -13,6 +13,11 @@ export interface BrewGuide {
   body: string;
 }
 
+export interface ProductImage {
+  src: string;
+  alt: string;
+}
+
 export interface Product {
   slug: string;
   name: string;
@@ -22,6 +27,7 @@ export interface Product {
   form: ProductForm;
   image: string;
   imageAlt: string;
+  images: readonly ProductImage[];
   flavorNotes: readonly [string, string, string];
   spec: ProductSpec;
   brewGuides: readonly BrewGuide[];
@@ -71,6 +77,20 @@ const dripBrewGuides: readonly BrewGuide[] = [
   },
 ];
 
+function galleryImages(primary: ProductImage, productLabel: string): readonly ProductImage[] {
+  return [
+    primary,
+    {
+      src: "/assets/farm-hillside.jpg",
+      alt: `Terraced Arabica coffee farm in Mai Sơn, Sơn La, where ${productLabel} is grown`,
+    },
+    {
+      src: "/assets/farm-harvest.jpg",
+      alt: `Highland coffee ridges in Sơn La, Vietnam, the origin of ${productLabel}`,
+    },
+  ];
+}
+
 export const products: Product[] = [
   {
     slug: "whole-bean-250g",
@@ -81,6 +101,13 @@ export const products: Product[] = [
     form: "whole-bean",
     image: "/assets/whole-bean-bag.png",
     imageAlt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+    images: galleryImages(
+      {
+        src: "/assets/whole-bean-bag.png",
+        alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+      },
+      "Maison Specialty Whole Bean 250g"
+    ),
     flavorNotes,
     spec: sharedSpec,
     brewGuides: wholeBeanBrewGuides,
@@ -93,6 +120,13 @@ export const products: Product[] = [
     form: "drip",
     image: "/assets/drip-bag-box.png",
     imageAlt: "Box of 10 Maison Specialty drip coffee bags from Sơn La, Vietnam",
+    images: galleryImages(
+      {
+        src: "/assets/drip-bag-box.png",
+        alt: "Box of 10 Maison Specialty drip coffee bags from Sơn La, Vietnam",
+      },
+      "Maison Specialty Drip 10-pack"
+    ),
     flavorNotes,
     spec: sharedSpec,
     brewGuides: dripBrewGuides,
@@ -105,6 +139,13 @@ export const products: Product[] = [
     form: "whole-bean",
     image: "/assets/whole-bean-bag.png",
     imageAlt: "500g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+    images: galleryImages(
+      {
+        src: "/assets/whole-bean-bag.png",
+        alt: "500g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+      },
+      "Maison Specialty Whole Bean 500g"
+    ),
     flavorNotes,
     spec: sharedSpec,
     brewGuides: wholeBeanBrewGuides,
@@ -118,6 +159,13 @@ export const products: Product[] = [
     form: "drip",
     image: "/assets/drip-bag-box.png",
     imageAlt: "Box of 5 Maison Specialty drip coffee bags from Sơn La, Vietnam",
+    images: galleryImages(
+      {
+        src: "/assets/drip-bag-box.png",
+        alt: "Box of 5 Maison Specialty drip coffee bags from Sơn La, Vietnam",
+      },
+      "Maison Specialty Drip 5-pack"
+    ),
     flavorNotes,
     spec: sharedSpec,
     brewGuides: dripBrewGuides,
@@ -131,6 +179,13 @@ export const products: Product[] = [
     form: "whole-bean",
     image: "/assets/whole-bean-bag.png",
     imageAlt: "1kg bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+    images: galleryImages(
+      {
+        src: "/assets/whole-bean-bag.png",
+        alt: "1kg bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+      },
+      "Maison Specialty Whole Bean 1kg"
+    ),
     flavorNotes,
     spec: sharedSpec,
     brewGuides: wholeBeanBrewGuides,

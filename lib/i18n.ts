@@ -102,6 +102,8 @@ export interface Dictionary {
     flavorLabel: string;
     vatNote: string;
     breadcrumbShop: string;
+    prevImageLabel: string;
+    nextImageLabel: string;
   };
   cart: {
     title: string;
@@ -239,6 +241,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       flavorLabel: "Flavor notes",
       vatNote: "VAT included",
       breadcrumbShop: "Shop",
+      prevImageLabel: "Previous image",
+      nextImageLabel: "Next image",
     },
     cart: {
       title: "Your cart",
@@ -390,6 +394,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       flavorLabel: "Hương vị",
       vatNote: "Đã bao gồm VAT",
       breadcrumbShop: "Cửa hàng",
+      prevImageLabel: "Ảnh trước",
+      nextImageLabel: "Ảnh tiếp theo",
     },
     cart: {
       title: "Giỏ hàng của bạn",

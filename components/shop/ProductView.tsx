@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { Container } from "@/components/Container";
@@ -6,6 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import { ProductCard } from "@/components/ProductCard";
 import { BrewingAccordion } from "@/components/shop/BrewingAccordion";
 import { ProductDetailActions } from "@/components/shop/ProductDetailActions";
+import { ProductGallery } from "@/components/shop/ProductGallery";
 import { formatVnd } from "@/lib/format";
 import { getOtherProducts, type Product } from "@/lib/products";
 import { getDictionary, homeHref, localeHref, type Locale } from "@/lib/i18n";
@@ -40,21 +40,12 @@ export function ProductView({ product, locale }: { product: Product; locale: Loc
           </nav>
 
           <div className="grid gap-12 lg:grid-cols-2">
-            <div className="relative aspect-square overflow-hidden rounded-lg bg-cream-200">
-              {product.badge && (
-                <span className="eyebrow absolute left-6 top-6 z-10 rounded-pill bg-gold-500 px-3 py-1 text-ink-900">
-                  {product.badge}
-                </span>
-              )}
-              <Image
-                src={product.image}
-                alt={product.imageAlt}
-                fill
-                sizes="(min-width: 1024px) 45vw, 90vw"
-                priority
-                className="object-contain p-12"
-              />
-            </div>
+            <ProductGallery
+              images={product.images}
+              badge={product.badge}
+              prevLabel={dict.product.prevImageLabel}
+              nextLabel={dict.product.nextImageLabel}
+            />
 
             <div>
               <p className="eyebrow text-ink-500">{product.variant}</p>
