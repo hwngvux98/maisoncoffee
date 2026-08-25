@@ -8,7 +8,13 @@ import { MobileMenu } from "@/components/MobileMenu";
 import { useCartStore, cartCount } from "@/lib/cart-store";
 import { homeHref, localeHref, type Dictionary, type Locale } from "@/lib/i18n";
 
-export function Header({ locale, dict }: { locale: Locale; dict: Dictionary["nav"] }) {
+export function Header({
+  locale,
+  dict,
+}: {
+  locale: Locale;
+  dict: Dictionary["nav"];
+}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const items = useCartStore((state) => state.items);
   const openDrawer = useCartStore((state) => state.openDrawer);
@@ -25,11 +31,17 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary["nav
     <>
       <header className="sticky top-0 z-40 border-b border-line bg-cream-100/95 backdrop-blur">
         <Container className="flex h-20 items-center justify-between">
-          <Link href={homeHref(locale)} className="font-display text-heading-md text-green-700">
-            maison coffee
+          <Link
+            href={homeHref(locale)}
+            className="font-display text-heading-md text-green-700"
+          >
+            MAISON COFFEE
           </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
+          <nav
+            className="hidden items-center gap-8 lg:flex"
+            aria-label="Primary"
+          >
             {navLinks.map((link) => (
               <Link
                 key={link.label}
