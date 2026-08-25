@@ -133,16 +133,17 @@ export const dictionaries: Record<Locale, Dictionary> = {
       closeMenuLabel: "Close menu",
     },
     hero: {
-      eyebrow: "From Mai Sơn · Sơn La · Vietnam",
+      eyebrow: "From Mai Son · Son La · Vietnam",
       heading: "Coffee grown in the clouds",
       subhead:
-        "Specialty Arabica roasted at origin in Vietnam's highest coffee country — honey-processed by the ethnic farmers who grow it.",
+        "Specialty Arabica roasted at origin in Vietnam's northwest region — honey-processed by the ethnic farmers who grow it.",
       ctaShop: "Shop the collection",
       ctaStory: "Our story",
       slideAlts: [
         "Terraced Arabica coffee farm on a misty highland slope in Mai Sơn, Sơn La",
         "Golden-hour view of highland coffee ridges above 1,400 meters in Sơn La, Vietnam",
         "Highland coffee terraces at sunrise in Mai Sơn, Sơn La, Vietnam",
+        "Bag of Maison Specialty coffee standing among honey-processed coffee cherries drying at the farm in Sơn La, Vietnam",
       ],
       prevLabel: "Previous slide",
       nextLabel: "Next slide",
@@ -163,7 +164,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Every lot is honey-processed on raised beds in the highland sun, then roasted medium-light nearby — close enough to taste what changes when a bag travels only kilometers, not oceans, before it reaches your cup.",
       ],
       cta: "Partner with us",
-      imageAlt: "Coffee farmer tending Arabica cherries on a terraced hillside in Mai Sơn, Sơn La",
+      imageAlt:
+        "Coffee farmer tending Arabica cherries on a terraced hillside in Mai Sơn, Sơn La",
     },
     roasting: {
       eyebrow: "The Craft",
@@ -196,7 +198,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       viewAll: "View all coffees →",
     },
     provenance: {
-      ribbon1: "FROM SƠN LA,",
+      ribbon1: "FROM SON LA,",
       ribbon2: "VIETNAM",
       line: "Driven by the passion to share the unique flavors of our mountains with the world.",
     },
@@ -211,10 +213,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
       submit: "Request sample kit",
       submitting: "Sending…",
       success: "Thank you — we'll be in touch about your sample kit shortly.",
-      error: "Something went wrong sending your request. Please try again or email hello@maisoncoffee.vn directly.",
+      error:
+        "Something went wrong sending your request. Please try again or email hello@maisoncoffee.vn directly.",
     },
     footer: {
-      description: "Specialty Arabica roasted at origin in the highlands of Sơn La, Vietnam.",
+      description:
+        "Specialty Arabica roasted at origin in the highlands of Sơn La, Vietnam.",
       shopHeading: "Shop",
       companyHeading: "Company",
       contactHeading: "Contact",
@@ -223,7 +227,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
     shop: {
       eyebrow: "The Collection",
       heading: "Highland Arabica, every way you brew",
-      subhead: "Single-origin Sơn La coffee — whole bean for your own grind, or drip bags for wherever you are.",
+      subhead:
+        "Single-origin Sơn La coffee — whole bean for your own grind, or drip bags for wherever you are.",
       addToCart: "Add to cart",
       vatNote: "VAT included",
     },
@@ -289,13 +294,14 @@ export const dictionaries: Record<Locale, Dictionary> = {
       eyebrow: "Từ Mai Sơn · Sơn La · Việt Nam",
       heading: "Cà phê trồng trong mây",
       subhead:
-        "Cà phê Arabica đặc sản rang tại vùng nguyên liệu cao nhất Việt Nam — chế biến honey bởi chính những người nông dân trồng nên nó.",
+        "Cà phê Arabica đặc sản rang tại vùng nguyên liệu tây bắc Việt Nam — chế biến honey bởi chính những người nông dân trồng nên nó.",
       ctaShop: "Xem bộ sưu tập",
       ctaStory: "Câu chuyện của chúng tôi",
       slideAlts: [
         "Nương cà phê Arabica bậc thang trong sương sớm tại Mai Sơn, Sơn La",
         "Những triền núi cà phê trên độ cao 1.400 mét ở Sơn La, Việt Nam lúc hoàng hôn",
         "Nương cà phê vùng cao lúc bình minh tại Mai Sơn, Sơn La, Việt Nam",
+        "Túi cà phê Maison Specialty đặt giữa những mẻ cà phê chế biến honey đang phơi tại nông trại ở Sơn La, Việt Nam",
       ],
       prevLabel: "Ảnh trước",
       nextLabel: "Ảnh tiếp theo",
@@ -316,7 +322,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Mỗi mẻ cà phê được chế biến honey trên giàn phơi dưới nắng vùng cao, rồi rang medium-light ngay gần đó — đủ gần để cảm nhận sự khác biệt khi cà phê chỉ di chuyển vài chục cây số, chứ không phải vượt đại dương, trước khi đến tay bạn.",
       ],
       cta: "Hợp tác cùng chúng tôi",
-      imageAlt: "Người nông dân chăm sóc cà phê Arabica trên nương bậc thang tại Mai Sơn, Sơn La",
+      imageAlt:
+        "Người nông dân chăm sóc cà phê Arabica trên nương bậc thang tại Mai Sơn, Sơn La",
     },
     roasting: {
       eyebrow: "Quy trình",
@@ -357,17 +364,23 @@ export const dictionaries: Record<Locale, Dictionary> = {
       eyebrow: "Bán sỉ & Xuất khẩu",
       heading: "Dành cho quán cà phê, xưởng rang & đối tác xuất khẩu",
       body: "Chúng tôi cung cấp cà phê Arabica vùng cao — cả nhân xanh và đã rang — với số lượng lớn, truy xuất nguồn gốc đầy đủ đến từng nông trại, vùng trồng, độ cao và phương pháp chế biến, cùng bộ mẫu thử gửi đi khắp thế giới.",
-      tags: ["Truy xuất nguồn gốc", "Nhân xanh hoặc đã rang", "Giao hàng toàn cầu"],
+      tags: [
+        "Truy xuất nguồn gốc",
+        "Nhân xanh hoặc đã rang",
+        "Giao hàng toàn cầu",
+      ],
       formTitle: "Yêu cầu bộ mẫu thử",
       businessNameLabel: "Tên doanh nghiệp",
       workEmailLabel: "Email công việc",
       submit: "Yêu cầu bộ mẫu thử",
       submitting: "Đang gửi…",
       success: "Cảm ơn bạn — chúng tôi sẽ liên hệ sớm về bộ mẫu thử.",
-      error: "Có lỗi khi gửi yêu cầu. Vui lòng thử lại hoặc gửi email trực tiếp đến hello@maisoncoffee.vn.",
+      error:
+        "Có lỗi khi gửi yêu cầu. Vui lòng thử lại hoặc gửi email trực tiếp đến hello@maisoncoffee.vn.",
     },
     footer: {
-      description: "Cà phê Arabica đặc sản, rang tại vùng cao Sơn La, Việt Nam.",
+      description:
+        "Cà phê Arabica đặc sản, rang tại vùng cao Sơn La, Việt Nam.",
       shopHeading: "Cửa hàng",
       companyHeading: "Công ty",
       contactHeading: "Liên hệ",
@@ -376,7 +389,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
     shop: {
       eyebrow: "Bộ sưu tập",
       heading: "Arabica vùng cao, mọi cách pha",
-      subhead: "Cà phê đơn vùng Sơn La — nguyên hạt để tự xay, hoặc túi lọc drip cho mọi lúc mọi nơi.",
+      subhead:
+        "Cà phê đơn vùng Sơn La — nguyên hạt để tự xay, hoặc túi lọc drip cho mọi lúc mọi nơi.",
       addToCart: "Thêm vào giỏ",
       vatNote: "Đã bao gồm VAT",
     },

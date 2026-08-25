@@ -9,9 +9,10 @@ import { products } from "@/lib/products";
 import { getDictionary, homeHref, localeHref, type Locale } from "@/lib/i18n";
 
 const heroImages = [
-  "/assets/farm-hillside.jpg",
-  "/assets/farm-harvest.jpg",
-  "/assets/farm-hillside.jpg",
+  "/assets/coffee-hill.png",
+  "/assets/coffee-fruit.webp",
+  "/assets/coffee-honey.tiff",
+  "/assets/whole-bean-on-honey.jpg",
 ];
 
 export function HomeView({ locale }: { locale: Locale }) {
@@ -21,7 +22,10 @@ export function HomeView({ locale }: { locale: Locale }) {
   return (
     <>
       <HeroSlideshow
-        images={dict.hero.slideAlts.map((alt, index) => ({ src: heroImages[index], alt }))}
+        images={dict.hero.slideAlts.map((alt, index) => ({
+          src: heroImages[index],
+          alt,
+        }))}
         prevLabel={dict.hero.prevLabel}
         nextLabel={dict.hero.nextLabel}
         slideLabel={dict.hero.slideLabel}
@@ -29,8 +33,12 @@ export function HomeView({ locale }: { locale: Locale }) {
         <Container>
           <div className="max-w-2xl">
             <p className="eyebrow text-gold-300">{dict.hero.eyebrow}</p>
-            <h1 className="mt-4 font-display text-display-xl text-cream-050">{dict.hero.heading}</h1>
-            <p className="mt-6 max-w-xl text-body-lg text-cream-050/90">{dict.hero.subhead}</p>
+            <h1 className="mt-4 font-display text-display-xl text-cream-050">
+              {dict.hero.heading}
+            </h1>
+            <p className="mt-6 max-w-xl text-body-lg text-cream-050/90">
+              {dict.hero.subhead}
+            </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href={localeHref(locale, "/shop")}
@@ -54,8 +62,12 @@ export function HomeView({ locale }: { locale: Locale }) {
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {dict.stats.map((stat) => (
               <div key={stat.label}>
-                <p className="font-display text-display-md text-gold-300">{stat.value}</p>
-                <p className="mt-2 text-body-sm text-cream-050/80">{stat.label}</p>
+                <p className="font-display text-display-md text-gold-300">
+                  {stat.value}
+                </p>
+                <p className="mt-2 text-body-sm text-cream-050/80">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
@@ -78,7 +90,9 @@ export function HomeView({ locale }: { locale: Locale }) {
             </Reveal>
             <Reveal delayMs={80}>
               <p className="eyebrow text-green-700">{dict.story.eyebrow}</p>
-              <h2 className="mt-4 font-display text-display-md text-ink-900">{dict.story.heading}</h2>
+              <h2 className="mt-4 font-display text-display-md text-ink-900">
+                {dict.story.heading}
+              </h2>
               <div className="mt-6 flex flex-col gap-4">
                 {dict.story.paragraphs.map((paragraph) => (
                   <p key={paragraph} className="text-body-lg text-ink-700">
@@ -108,8 +122,12 @@ export function HomeView({ locale }: { locale: Locale }) {
           <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {dict.roasting.steps.map((step, index) => (
               <Reveal key={step.number} delayMs={index * 80}>
-                <p className="font-display text-display-md text-gold-500">{step.number}</p>
-                <h3 className="mt-3 font-display text-heading-md text-ink-900">{step.title}</h3>
+                <p className="font-display text-display-md text-gold-500">
+                  {step.number}
+                </p>
+                <h3 className="mt-3 font-display text-heading-md text-ink-900">
+                  {step.title}
+                </h3>
                 <p className="mt-2 text-body-md text-ink-700">{step.body}</p>
               </Reveal>
             ))}
@@ -121,7 +139,9 @@ export function HomeView({ locale }: { locale: Locale }) {
         <Container>
           <Reveal>
             <div className="flex items-end justify-between gap-4">
-              <h2 className="font-display text-display-md text-ink-900">{dict.featured.heading}</h2>
+              <h2 className="font-display text-display-md text-ink-900">
+                {dict.featured.heading}
+              </h2>
               <Link
                 href={localeHref(locale, "/shop")}
                 className="hidden text-body-md font-medium text-green-700 hover:text-green-800 sm:block"
@@ -162,7 +182,9 @@ export function HomeView({ locale }: { locale: Locale }) {
                 {dict.provenance.ribbon2}
               </span>
             </div>
-            <p className="mt-10 font-display text-display-md text-cream-050">{dict.provenance.line}</p>
+            <p className="mt-10 font-display text-display-md text-cream-050">
+              {dict.provenance.line}
+            </p>
           </Reveal>
         </Container>
       </section>
@@ -172,8 +194,12 @@ export function HomeView({ locale }: { locale: Locale }) {
           <div className="grid gap-12 lg:grid-cols-2">
             <Reveal>
               <p className="eyebrow text-green-700">{dict.wholesale.eyebrow}</p>
-              <h2 className="mt-4 font-display text-display-md text-ink-900">{dict.wholesale.heading}</h2>
-              <p className="mt-6 text-body-lg text-ink-700">{dict.wholesale.body}</p>
+              <h2 className="mt-4 font-display text-display-md text-ink-900">
+                {dict.wholesale.heading}
+              </h2>
+              <p className="mt-6 text-body-lg text-ink-700">
+                {dict.wholesale.body}
+              </p>
               <ul className="mt-6 flex flex-wrap gap-3">
                 {dict.wholesale.tags.map((tag) => (
                   <li

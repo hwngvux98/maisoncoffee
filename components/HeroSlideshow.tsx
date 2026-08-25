@@ -1,6 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { usePrefersReducedMotion } from "@/lib/use-prefers-reduced-motion";
@@ -72,11 +78,14 @@ export function HeroSlideshow({
       <div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(to top, rgba(18,48,26,0.86), rgba(18,48,26,0.30))",
+          background:
+            "linear-gradient(to top, rgba(18,48,26,0.86), rgba(18,48,26,0.30))",
         }}
       />
 
-      <div className="relative z-10 w-full pb-16 pt-32 md:pb-24">{children}</div>
+      <div className="relative z-10 w-full pb-16 pt-32 md:pb-24">
+        {children}
+      </div>
 
       <div className="absolute bottom-8 right-6 z-10 flex items-center gap-4 md:right-10">
         <button
@@ -102,7 +111,8 @@ export function HeroSlideshow({
                 style={{
                   transformOrigin: "left",
                   transform: `scaleX(${index === active ? 1 : 0})`,
-                  transitionDuration: index === active ? `${INTERVAL_MS}ms` : "150ms",
+                  transitionDuration:
+                    index === active ? `${INTERVAL_MS}ms` : "150ms",
                 }}
               />
             </button>

@@ -95,15 +95,16 @@ export const products: Product[] = [
   {
     slug: "whole-bean-250g",
     name: "Maison Specialty",
-    variant: "Whole Bean · Túi 250g",
+    variant: "Whole Bean · 250g",
     priceVnd: 200000,
     badge: "Bestseller",
     form: "whole-bean",
-    image: "/assets/whole-bean-bag.png",
-    imageAlt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+    image: "/assets/whole-bean-bag-image-english.png",
+    imageAlt:
+      "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
     images: galleryImages(
       {
-        src: "/assets/whole-bean-bag.png",
+        src: "/assets/whole-bean-bag-image-english.png",
         alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
       },
       "Maison Specialty Whole Bean 250g"
@@ -115,14 +116,15 @@ export const products: Product[] = [
   {
     slug: "drip-bags-10",
     name: "Maison Specialty",
-    variant: "Drip · 10 gói × 8g",
+    variant: "Drip · 10 bags × 8g",
     priceVnd: 125000,
     form: "drip",
-    image: "/assets/drip-bag-box.png",
-    imageAlt: "Box of 10 Maison Specialty drip coffee bags from Sơn La, Vietnam",
+    image: "/assets/drip-bag-box-english.png",
+    imageAlt:
+      "Box of 10 Maison Specialty drip coffee bags from Sơn La, Vietnam",
     images: galleryImages(
       {
-        src: "/assets/drip-bag-box.png",
+        src: "/assets/drip-bag-box-english.png",
         alt: "Box of 10 Maison Specialty drip coffee bags from Sơn La, Vietnam",
       },
       "Maison Specialty Drip 10-pack"
@@ -134,14 +136,15 @@ export const products: Product[] = [
   {
     slug: "whole-bean-500g",
     name: "Maison Specialty",
-    variant: "Whole Bean · Túi 500g",
+    variant: "Whole Bean · 500g",
     priceVnd: 365000,
     form: "whole-bean",
-    image: "/assets/whole-bean-bag.png",
-    imageAlt: "500g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+    image: "/assets/whole-bean-bag-image-english.png",
+    imageAlt:
+      "500g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
     images: galleryImages(
       {
-        src: "/assets/whole-bean-bag.png",
+        src: "/assets/whole-bean-bag-image-english.png",
         alt: "500g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
       },
       "Maison Specialty Whole Bean 500g"
@@ -153,15 +156,15 @@ export const products: Product[] = [
   {
     slug: "drip-bags-5",
     name: "Maison Specialty",
-    variant: "Drip · 5 gói × 8g",
+    variant: "Drip · 5 bags × 8g",
     priceVnd: 62000,
     badge: "Dùng thử",
     form: "drip",
-    image: "/assets/drip-bag-box.png",
+    image: "/assets/drip-bag-box-english.png",
     imageAlt: "Box of 5 Maison Specialty drip coffee bags from Sơn La, Vietnam",
     images: galleryImages(
       {
-        src: "/assets/drip-bag-box.png",
+        src: "/assets/drip-bag-box-english.png",
         alt: "Box of 5 Maison Specialty drip coffee bags from Sơn La, Vietnam",
       },
       "Maison Specialty Drip 5-pack"
@@ -173,15 +176,16 @@ export const products: Product[] = [
   {
     slug: "whole-bean-1kg",
     name: "Maison Specialty",
-    variant: "Whole Bean · Túi 1 kg",
+    variant: "Whole Bean · 1 kg",
     priceVnd: 700000,
     badge: "Tiết kiệm nhất",
     form: "whole-bean",
-    image: "/assets/whole-bean-bag.png",
-    imageAlt: "1kg bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+    image: "/assets/whole-bean-bag-image-english.png",
+    imageAlt:
+      "1kg bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
     images: galleryImages(
       {
-        src: "/assets/whole-bean-bag.png",
+        src: "/assets/whole-bean-bag-image-english.png",
         alt: "1kg bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
       },
       "Maison Specialty Whole Bean 1kg"

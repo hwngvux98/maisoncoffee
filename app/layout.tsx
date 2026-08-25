@@ -9,7 +9,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Maison Coffee — Specialty Arabica Roasted at Origin in Sơn La, Vietnam",
+    default:
+      "Maison Coffee — Specialty Arabica Roasted at Origin in Sơn La, Vietnam",
     template: `%s — ${SITE_NAME}`,
   },
   description:
@@ -28,7 +29,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     alternateLocale: ["vi_VN"],
     url: SITE_URL,
-    title: "Maison Coffee — Specialty Arabica Roasted at Origin in Sơn La, Vietnam",
+    title:
+      "Maison Coffee — Specialty Arabica Roasted at Origin in Sơn La, Vietnam",
     description:
       "100% highland Arabica grown at 1,400m+ in Mai Sơn, Sơn La. Honey-processed, medium-light roast, direct from Vietnamese farmer partners.",
     images: [
@@ -42,7 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maison Coffee — Specialty Arabica Roasted at Origin in Sơn La, Vietnam",
+    title:
+      "Maison Coffee — Specialty Arabica Roasted at Origin in Sơn La, Vietnam",
     description:
       "100% highland Arabica grown at 1,400m+ in Mai Sơn, Sơn La. Honey-processed, medium-light roast, direct from Vietnamese farmer partners.",
     images: ["/opengraph-image"],
@@ -68,7 +71,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="min-h-screen bg-cream-100 text-ink-900 antialiased">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd()),
+          }}
         />
         <script
           type="application/ld+json"
