@@ -1,5 +1,6 @@
 export const SITE_NAME = "Maison Coffee";
-export const CONTACT_EMAIL = "hello@maisoncoffee.vn";
+export const CONTACT_EMAIL = "hello@maisoncoffeevn.com";
 
 // Overridable via NEXT_PUBLIC_SITE_URL (see deployment notes).
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://maisoncoffeevn.com";
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://maisoncoffeevn.com";
