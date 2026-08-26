@@ -10,11 +10,13 @@ const SWIPE_THRESHOLD_PX = 40;
 export function ProductGallery({
   images,
   badge,
+  main = false,
   prevLabel = "Previous image",
   nextLabel = "Next image",
 }: {
   images: readonly ProductImage[];
   badge?: string;
+  main?: boolean;
   prevLabel?: string;
   nextLabel?: string;
 }) {
@@ -57,7 +59,7 @@ export function ProductGallery({
         className="relative aspect-square touch-pan-y overflow-hidden rounded-lg bg-cream-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
       >
         {badge && (
-          <span className="eyebrow absolute left-6 top-6 z-10 rounded-pill bg-gold-500 px-3 py-1 text-ink-900">
+          <span className="eyebrow absolute left-4 top-4 z-10 rounded-pill bg-gold-500 px-3 py-1 text-ink-900">
             {badge}
           </span>
         )}
@@ -69,13 +71,21 @@ export function ProductGallery({
             style={{ opacity: index === active ? 1 : 0 }}
             aria-hidden={index !== active}
           >
+            {/* <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              sizes="(min-width: 1024px) 45vw, 90vw"
+              priority={index === 0}
+              className="object-contain p-8"
+            /> */}
             <Image
               src={image.src}
               alt={image.alt}
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
               priority={index === 0}
-              className="object-contain p-12"
+              className="object-cover"
             />
           </div>
         ))}
@@ -106,8 +116,8 @@ export function ProductGallery({
         )}
       </div>
 
-      {images.length > 1 && (
-        <div className="mt-4 flex gap-3 overflow-x-auto pb-1">
+      {images.length > 1 && !main && (
+        <div className="mt-4 p-1 flex gap-3 overflow-x-auto pb-1">
           {images.map((image, index) => {
             const isActive = index === active;
             return (
@@ -118,10 +128,18 @@ export function ProductGallery({
                 aria-label={`View image ${index + 1} of ${images.length}`}
                 aria-current={isActive}
                 className={`relative h-16 w-16 shrink-0 overflow-hidden rounded-sm bg-cream-200 transition-all duration-150 ease-brand ${
-                  isActive ? "ring-2 ring-green-500" : "opacity-70 hover:opacity-100"
+                  isActive
+                    ? "ring-2 ring-green-500"
+                    : "opacity-70 hover:opacity-100"
                 }`}
               >
-                <Image src={image.src} alt="" fill sizes="64px" className="object-contain p-2" />
+                <Image
+                  src={image.src}
+                  alt=""
+                  fill
+                  sizes="64px"
+                  className="object-contain p-2"
+                />
               </button>
             );
           })}

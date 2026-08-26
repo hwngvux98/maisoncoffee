@@ -10,7 +10,13 @@ import { formatVnd } from "@/lib/format";
 import { getOtherProducts, type Product } from "@/lib/products";
 import { getDictionary, homeHref, localeHref, type Locale } from "@/lib/i18n";
 
-export function ProductView({ product, locale }: { product: Product; locale: Locale }) {
+export function ProductView({
+  product,
+  locale,
+}: {
+  product: Product;
+  locale: Locale;
+}) {
   const dict = getDictionary(locale);
   const crossSell = getOtherProducts(product.slug, 3);
 
@@ -23,16 +29,24 @@ export function ProductView({ product, locale }: { product: Product; locale: Loc
     { label: dict.product.flavorLabel, value: product.flavorNotes.join(" · ") },
   ];
 
+  console.log("product", product);
+
   return (
     <>
       <section className="py-10 md:py-14">
         <Container>
-          <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-body-sm text-ink-500">
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-8 flex items-center gap-2 text-body-sm text-ink-500"
+          >
             <Link href={homeHref(locale)} className="hover:text-green-700">
               maison coffee
             </Link>
             <ChevronRight size={14} strokeWidth={1.5} aria-hidden="true" />
-            <Link href={localeHref(locale, "/shop")} className="hover:text-green-700">
+            <Link
+              href={localeHref(locale, "/shop")}
+              className="hover:text-green-700"
+            >
               {dict.product.breadcrumbShop}
             </Link>
             <ChevronRight size={14} strokeWidth={1.5} aria-hidden="true" />
@@ -49,12 +63,20 @@ export function ProductView({ product, locale }: { product: Product; locale: Loc
 
             <div>
               <p className="eyebrow text-ink-500">{product.variant}</p>
-              <h1 className="mt-3 font-display text-display-md text-green-700">{product.name}</h1>
-              <p className="mt-3 text-body-lg text-ink-700">{product.flavorNotes.join(" · ")}</p>
+              <h1 className="mt-3 font-display text-display-md text-green-700">
+                {product.name}
+              </h1>
+              <p className="mt-3 text-body-lg text-ink-700">
+                {product.flavorNotes.join(" · ")}
+              </p>
 
               <div className="mt-6">
-                <p className="text-heading-md font-medium text-ink-900">{formatVnd(product.priceVnd)}</p>
-                <p className="text-body-sm text-ink-500">{dict.product.vatNote}</p>
+                <p className="text-heading-md font-medium text-ink-900">
+                  {formatVnd(product.priceVnd)}
+                </p>
+                <p className="text-body-sm text-ink-500">
+                  {dict.product.vatNote}
+                </p>
               </div>
 
               <div className="mt-8">
@@ -66,19 +88,28 @@ export function ProductView({ product, locale }: { product: Product; locale: Loc
               </div>
 
               <div className="mt-10">
-                <h2 className="eyebrow text-green-700">{dict.product.specTitle}</h2>
+                <h2 className="eyebrow text-green-700">
+                  {dict.product.specTitle}
+                </h2>
                 <dl className="mt-4 divide-y divide-line border-y border-line">
                   {specRows.map((row) => (
-                    <div key={row.label} className="flex justify-between gap-4 py-3">
+                    <div
+                      key={row.label}
+                      className="flex justify-between gap-4 py-3"
+                    >
                       <dt className="text-body-sm text-ink-500">{row.label}</dt>
-                      <dd className="text-body-sm font-medium text-ink-900">{row.value}</dd>
+                      <dd className="text-body-sm font-medium text-ink-900">
+                        {row.value}
+                      </dd>
                     </div>
                   ))}
                 </dl>
               </div>
 
               <div className="mt-10">
-                <h2 className="eyebrow text-green-700">{dict.product.brewingTitle}</h2>
+                <h2 className="eyebrow text-green-700">
+                  {dict.product.brewingTitle}
+                </h2>
                 <div className="mt-4">
                   <BrewingAccordion guides={product.brewGuides} />
                 </div>
@@ -91,7 +122,9 @@ export function ProductView({ product, locale }: { product: Product; locale: Loc
       <section className="bg-cream-050 py-16 md:py-24">
         <Container>
           <Reveal>
-            <h2 className="font-display text-heading-lg text-ink-900">{dict.product.crossSellTitle}</h2>
+            <h2 className="font-display text-heading-lg text-ink-900">
+              {dict.product.crossSellTitle}
+            </h2>
           </Reveal>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {crossSell.map((item, index) => (
