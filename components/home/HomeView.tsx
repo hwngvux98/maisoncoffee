@@ -10,9 +10,10 @@ import { getDictionary, homeHref, localeHref, type Locale } from "@/lib/i18n";
 
 const heroImages = [
   "/assets/coffee-hill.png",
+  "/assets/Cherry_32_16.jpg",
+  "/assets/cafe-nguyen-ban-minh-tien.jpg",
   "/assets/coffee-fruit.webp",
   "/assets/coffee-honey.tiff",
-  "/assets/whole-bean-on-honey.jpg",
 ];
 
 export function HomeView({ locale }: { locale: Locale }) {
@@ -59,7 +60,7 @@ export function HomeView({ locale }: { locale: Locale }) {
         </Container>
       </HeroSlideshow>
 
-      <section className="bg-green-900 py-12 md:py-16">
+      <section className="bg-green-900 py-12 md:py-">
         <Container>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {dict.stats.map((stat) => (
@@ -82,7 +83,7 @@ export function HomeView({ locale }: { locale: Locale }) {
             <Reveal>
               <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
                 <Image
-                  src="/assets/farm-harvest.jpg"
+                  src="/assets/whole-bean-on-honey.jpg"
                   alt={dict.story.imageAlt}
                   fill
                   sizes="(min-width: 768px) 45vw, 90vw"

@@ -155,11 +155,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
     ],
     story: {
       eyebrow: "Our Origin",
-      heading: "Grown in the highlands of Sơn La",
+      heading: "Grown in the highlands of Son La",
       paragraphs: [
         "Maison Coffee was founded in Mai Sơn, Sơn La — the highland region with the largest Arabica-growing area in Vietnam.",
-        "We built our roastery at origin, above 1,400 meters, and work directly with the Thái, H'Mông and Kinh families who tend these hillsides.",
-        "Every lot is honey-processed on raised beds in the highland sun, then roasted medium-light nearby — close enough to taste what changes when a bag travels only kilometers, not oceans, before it reaches your cup.",
+        "We built our roastery at origin, above 800 meters, and work directly with the Thái families who tend these hillsides.",
+        "Our coffee is carefully grown and harvested only ripe cherries. The cherries are then processed using a variety of methods like natural, honey to bring out the unique character and produce specialty-grade green beans.",
+        "Every batch is roasted using PROBAT drum roaster and handled with strict food safety processes to ensure quality, cleanliness, and consistency from our roastery to your cup",
+        "Following SCA standards, we deliver high-quality, sustainable Vietnamese specialty coffee-crafted to be shared with the world.",
       ],
       cta: "Partner with us",
       imageAlt:
@@ -296,6 +298,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       slideAlts: [
         "Nương cà phê Arabica bậc thang trong sương sớm tại Mai Sơn, Sơn La",
         "Những triền núi cà phê trên độ cao 1.400 mét ở Sơn La, Việt Nam lúc hoàng hôn",
+        "Nương cà phê vùng cao lúc bình minh tại Mai Sơn, Sơn La, Việt Nam",
         "Nương cà phê vùng cao lúc bình minh tại Mai Sơn, Sơn La, Việt Nam",
       ],
       prevLabel: "Ảnh trước",
