@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
@@ -45,23 +44,23 @@ export function HomeView({ locale }: { locale: Locale }) {
     images: [
       {
         src: "/assets/whole-bean-on-honey.jpg",
-        alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+        alt: "Bag of Maison Specialty coffee standing among honey-processed coffee cherries drying at the farm in Sơn La, Vietnam",
       },
       {
         src: "/assets/drip-bag-on-honey.jpg",
-        alt: "Terraced Arabica coffee farm in Mai Sơn, Sơn La, where Maison Specialty Whole Bean 250g is grown",
+        alt: "Maison Specialty drip coffee bag and box standing on honey-processed cherries drying in the highland sun",
       },
       {
         src: "/assets/roaster-probat.png",
-        alt: "Highland coffee ridges in Sơn La, Vietnam, the origin of Maison Specialty Whole Bean 250g",
+        alt: "Coffee beans tumbling in the roasting drum and cooling tray at Maison Coffee's roastery",
       },
       {
         src: "/assets/roaster.gif",
-        alt: "Highland coffee ridges in Sơn La, Vietnam, the origin of Maison Specialty Whole Bean 250g",
+        alt: "Coffee beans roasting and cooling in motion at Maison Coffee's roastery",
       },
       {
         src: "/assets/cafe-show-hanoi-2025.jpg",
-        alt: "Highland coffee ridges in Sơn La, Vietnam, the origin of Maison Specialty Whole Bean 250g",
+        alt: "Maison Coffee's booth at Cafe Show Hanoi, with shelves of Maison Specialty coffee and a staff member preparing a pour-over",
       },
     ],
     flavorNotes: ["Caramel", "Dark chocolate", "Black tea"],
@@ -157,13 +156,6 @@ export function HomeView({ locale }: { locale: Locale }) {
                   nextLabel={dict.product.nextImageLabel}
                   main
                 />
-                {/* <Image
-                  src="/assets/farm-harvest.jpg"
-                  alt={dict.story.imageAlt}
-                  fill
-                  sizes="(min-width: 768px) 45vw, 90vw"
-                  className="object-cover"
-                /> */}
               </div>
             </Reveal>
             <Reveal delayMs={80}>

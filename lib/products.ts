@@ -77,13 +77,6 @@ const dripBrewGuides: readonly BrewGuide[] = [
   },
 ];
 
-function galleryImages(
-  primary: ProductImage[],
-  productLabel: string
-): readonly ProductImage[] {
-  return primary;
-}
-
 export const products: Product[] = [
   {
     slug: "whole-bean-250g",
@@ -95,27 +88,24 @@ export const products: Product[] = [
     image: "/assets/whole-bean-bag-image-english.png",
     imageAlt:
       "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-    images: galleryImages(
-      [
-        {
-          src: "/assets/whole-bean-bag-image-english.png",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/whole-bean-on-honey.jpg",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/pour-over-maison.png",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/roasted-bean.jpg",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-      ],
-      "Maison Specialty Whole Bean 250g"
-    ),
+    images: [
+      {
+        src: "/assets/whole-bean-bag-image-english.png",
+        alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+      },
+      {
+        src: "/assets/whole-bean-on-honey.jpg",
+        alt: "Bag of Maison Specialty coffee standing among honey-processed coffee cherries drying at the farm in Sơn La, Vietnam",
+      },
+      {
+        src: "/assets/pour-over-maison.png",
+        alt: "Pour-over brewing of Maison Specialty coffee beside the whole bean bag",
+      },
+      {
+        src: "/assets/roasted-bean.jpg",
+        alt: "Roasted Maison Specialty coffee beans in a cupping bowl",
+      },
+    ],
     flavorNotes,
     spec: sharedSpec,
     brewGuides: wholeBeanBrewGuides,
@@ -129,23 +119,20 @@ export const products: Product[] = [
     image: "/assets/drip-bag-box-english.png",
     imageAlt:
       "Box of 10 Maison Specialty drip coffee bags from Sơn La, Vietnam",
-    images: galleryImages(
-      [
-        {
-          src: "/assets/whole-bean-bag-image-english.png",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/drip-bag-on-honey.jpg",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/drip_real_image.jpg",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-      ],
-      "Maison Specialty Drip 10-pack"
-    ),
+    images: [
+      {
+        src: "/assets/drip-bag-box-english.png",
+        alt: "Box of 10 Maison Specialty drip coffee bags from Sơn La, Vietnam",
+      },
+      {
+        src: "/assets/drip-bag-on-honey.jpg",
+        alt: "Maison Specialty drip coffee bag and box standing on honey-processed cherries drying in the highland sun",
+      },
+      {
+        src: "/assets/drip_real_image.jpg",
+        alt: "Maison Specialty drip coffee bag brewing into a cup",
+      },
+    ],
     flavorNotes,
     spec: sharedSpec,
     brewGuides: dripBrewGuides,
@@ -159,27 +146,24 @@ export const products: Product[] = [
     image: "/assets/whole-bean-bag-image-english.png",
     imageAlt:
       "500g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-    images: galleryImages(
-      [
-        {
-          src: "/assets/whole-bean-bag-image-english.png",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/whole-bean-on-honey.jpg",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/pour-over-maison.png",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/roasted-bean.jpg",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-      ],
-      "Maison Specialty Whole Bean 500g"
-    ),
+    images: [
+      {
+        src: "/assets/whole-bean-bag-image-english.png",
+        alt: "500g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+      },
+      {
+        src: "/assets/whole-bean-on-honey.jpg",
+        alt: "Bag of Maison Specialty coffee standing among honey-processed coffee cherries drying at the farm in Sơn La, Vietnam",
+      },
+      {
+        src: "/assets/pour-over-maison.png",
+        alt: "Pour-over brewing of Maison Specialty coffee beside the whole bean bag",
+      },
+      {
+        src: "/assets/roasted-bean.jpg",
+        alt: "Roasted Maison Specialty coffee beans in a cupping bowl",
+      },
+    ],
     flavorNotes,
     spec: sharedSpec,
     brewGuides: wholeBeanBrewGuides,
@@ -193,23 +177,20 @@ export const products: Product[] = [
     form: "drip",
     image: "/assets/drip-bag-box-english.png",
     imageAlt: "Box of 5 Maison Specialty drip coffee bags from Sơn La, Vietnam",
-    images: galleryImages(
-      [
-        {
-          src: "/assets/whole-bean-bag-image-english.png",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/drip-bag-on-honey.jpg",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/drip_real_image.jpg",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-      ],
-      "Maison Specialty Drip 5-pack"
-    ),
+    images: [
+      {
+        src: "/assets/drip-bag-box-english.png",
+        alt: "Box of 5 Maison Specialty drip coffee bags from Sơn La, Vietnam",
+      },
+      {
+        src: "/assets/drip-bag-on-honey.jpg",
+        alt: "Maison Specialty drip coffee bag and box standing on honey-processed cherries drying in the highland sun",
+      },
+      {
+        src: "/assets/drip_real_image.jpg",
+        alt: "Maison Specialty drip coffee bag brewing into a cup",
+      },
+    ],
     flavorNotes,
     spec: sharedSpec,
     brewGuides: dripBrewGuides,
@@ -224,27 +205,24 @@ export const products: Product[] = [
     image: "/assets/whole-bean-bag-image-english.png",
     imageAlt:
       "1kg bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-    images: galleryImages(
-      [
-        {
-          src: "/assets/whole-bean-bag-image-english.png",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/whole-bean-on-honey.jpg",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/pour-over-maison.png",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-        {
-          src: "/assets/roasted-bean.jpg",
-          alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
-        },
-      ],
-      "Maison Specialty Whole Bean 1kg"
-    ),
+    images: [
+      {
+        src: "/assets/whole-bean-bag-image-english.png",
+        alt: "1kg bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+      },
+      {
+        src: "/assets/whole-bean-on-honey.jpg",
+        alt: "Bag of Maison Specialty coffee standing among honey-processed coffee cherries drying at the farm in Sơn La, Vietnam",
+      },
+      {
+        src: "/assets/pour-over-maison.png",
+        alt: "Pour-over brewing of Maison Specialty coffee beside the whole bean bag",
+      },
+      {
+        src: "/assets/roasted-bean.jpg",
+        alt: "Roasted Maison Specialty coffee beans in a cupping bowl",
+      },
+    ],
     flavorNotes,
     spec: sharedSpec,
     brewGuides: wholeBeanBrewGuides,

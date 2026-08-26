@@ -19,7 +19,7 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
   });
   page.on("pageerror", (err) => consoleErrors.push(String(err)));
 
-  await page.goto(`${BASE}/`, { waitUntil: "networkidle" });
+  await page.goto(`${BASE}/`, { waitUntil: "load" });
   log("Home loads", (await page.title()).includes("Maison Coffee"));
   log("H1 present", (await page.locator("h1").first().textContent())?.includes("clouds"));
 
@@ -39,7 +39,7 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
   log("Escape closes cart drawer", drawerClosedAfterEsc);
 
   // Product detail page
-  await page.goto(`${BASE}/shop/whole-bean-250g`, { waitUntil: "networkidle" });
+  await page.goto(`${BASE}/shop/whole-bean-250g`, { waitUntil: "load" });
   log("Product page loads", (await page.locator("h1").first().textContent())?.includes("Maison Specialty"));
   const productStepper = page.locator('main [role="group"][aria-label="Quantity"]');
   await productStepper.locator('button[aria-label="Increase quantity"]').click();
@@ -47,17 +47,17 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
   log("Quantity stepper increments", qty?.trim() === "2", `qty=${qty}`);
 
   // Cart page
-  await page.goto(`${BASE}/cart`, { waitUntil: "networkidle" });
+  await page.goto(`${BASE}/cart`, { waitUntil: "load" });
   const cartH1 = await page.locator("h1").first().textContent();
   log("Cart page renders", !!cartH1);
 
   // Vietnamese route
-  await page.goto(`${BASE}/vi`, { waitUntil: "networkidle" });
+  await page.goto(`${BASE}/vi`, { waitUntil: "load" });
   const viH1 = await page.locator("h1").first().textContent();
   log("VI home renders Vietnamese h1", viH1?.includes("mây"), `h1=${viH1}`);
 
   // Wholesale form validation (submit without network — check required attrs, not full send)
-  await page.goto(`${BASE}/#wholesale`, { waitUntil: "networkidle" });
+  await page.goto(`${BASE}/#wholesale`, { waitUntil: "load" });
   const emailRequired = await page.locator("#workEmail").getAttribute("required");
   log("Wholesale email input is required", emailRequired !== null);
 
@@ -68,7 +68,7 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
 // Mobile menu flow
 {
   const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
-  await page.goto(`${BASE}/`, { waitUntil: "networkidle" });
+  await page.goto(`${BASE}/`, { waitUntil: "load" });
   await page.locator('button[aria-label="Open menu"]').click();
   await page.waitForTimeout(300);
   const menuOverlay = page.locator('div[aria-hidden]:has([aria-label="Menu"])');

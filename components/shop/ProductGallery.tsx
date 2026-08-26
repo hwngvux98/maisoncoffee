@@ -71,14 +71,6 @@ export function ProductGallery({
             style={{ opacity: index === active ? 1 : 0 }}
             aria-hidden={index !== active}
           >
-            {/* <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              sizes="(min-width: 1024px) 45vw, 90vw"
-              priority={index === 0}
-              className="object-contain p-8"
-            /> */}
             <Image
               src={image.src}
               alt={image.alt}
