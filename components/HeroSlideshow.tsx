@@ -51,7 +51,7 @@ export function HeroSlideshow({
 
   return (
     <section
-      className="relative flex min-h-[min(88vh,760px)] items-end overflow-hidden bg-green-900"
+      className="relative flex min-h-[min(94vh,900px)] items-end overflow-hidden bg-green-900"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
