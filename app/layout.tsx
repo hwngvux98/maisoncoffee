@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title:
       "Maison Coffee — Specialty Arabica Roasted at Origin in Sơn La, Vietnam",
     description:
-      "100% highland Arabica grown at 1,400m+ in Mai Sơn, Sơn La. Honey-processed, medium-light roast, direct from Vietnamese farmer partners.",
+      "100% highland Arabica grown at 800+ in Mai Sơn, Sơn La. Honey-processed, medium-light roast, direct from Vietnamese farmer partners.",
     images: [
       {
         url: "/opengraph-image",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title:
       "Maison Coffee — Specialty Arabica Roasted at Origin in Sơn La, Vietnam",
     description:
-      "100% highland Arabica grown at 1,400m+ in Mai Sơn, Sơn La. Honey-processed, medium-light roast, direct from Vietnamese farmer partners.",
+      "100% highland Arabica grown at 800+ in Mai Sơn, Sơn La. Honey-processed, medium-light roast, direct from Vietnamese farmer partners.",
     images: ["/opengraph-image"],
   },
   robots: {

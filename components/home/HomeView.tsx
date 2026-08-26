@@ -7,18 +7,90 @@ import { ProductCard } from "@/components/ProductCard";
 import { WholesaleForm } from "@/components/WholesaleForm";
 import { products } from "@/lib/products";
 import { getDictionary, homeHref, localeHref, type Locale } from "@/lib/i18n";
+import { ProductGallery } from "@/components/shop/ProductGallery";
 
 const heroImages = [
   "/assets/coffee-hill.png",
+  "/assets/Cherry_32_16.jpg",
+  "/assets/cafe-nguyen-ban-minh-tien.jpg",
   "/assets/coffee-fruit.webp",
-  "/assets/coffee-honey.tiff",
-  "/assets/whole-bean-on-honey.jpg",
+];
+
+const heroImages2 = [
+  "/assets/coffee-expo/maison-expo-1.jpg",
+  "/assets/coffee-expo/maison-expo-5.jpg",
+  "/assets/coffee-expo/maison-expo-8.jpg",
+  "/assets/coffee-expo/maison-expo-6.jpg",
+  "/assets/coffee-expo/maison-expo-2.jpeg",
+  "/assets/coffee-expo/maison-expo-11.jpg",
+  "/assets/coffee-expo/maison-expo-9.jpg",
+  "/assets/coffee-expo/maison-expo-12.jpg",
+  "/assets/coffee-expo/maison-expo-10.jpg",
 ];
 
 export function HomeView({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
   const featured = products.slice(0, 3);
 
+  const listStoryImage = {
+    slug: "whole-bean-250g",
+    name: "Maison Specialty",
+    variant: "Whole Bean · 250g",
+    priceVnd: 200000,
+    badge: "Bestseller",
+    form: "whole-bean",
+    image: "/assets/whole-bean-bag-image-english.png",
+    imageAlt:
+      "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+    images: [
+      {
+        src: "/assets/whole-bean-on-honey.jpg",
+        alt: "250g bag of Maison Specialty whole bean coffee from Sơn La, Vietnam",
+      },
+      {
+        src: "/assets/drip-bag-on-honey.jpg",
+        alt: "Terraced Arabica coffee farm in Mai Sơn, Sơn La, where Maison Specialty Whole Bean 250g is grown",
+      },
+      {
+        src: "/assets/roaster-probat.png",
+        alt: "Highland coffee ridges in Sơn La, Vietnam, the origin of Maison Specialty Whole Bean 250g",
+      },
+      {
+        src: "/assets/roaster.gif",
+        alt: "Highland coffee ridges in Sơn La, Vietnam, the origin of Maison Specialty Whole Bean 250g",
+      },
+      {
+        src: "/assets/cafe-show-hanoi-2025.jpg",
+        alt: "Highland coffee ridges in Sơn La, Vietnam, the origin of Maison Specialty Whole Bean 250g",
+      },
+    ],
+    flavorNotes: ["Caramel", "Dark chocolate", "Black tea"],
+    spec: {
+      farm: "Thái, H'Mông & Kinh farmer partners",
+      region: "Mai Sơn, Sơn La, Vietnam",
+      altitude: "800+",
+      process: "Honey processed",
+      roast: "Medium-light",
+    },
+    brewGuides: [
+      {
+        title: "Pour-over",
+        body: "Grind medium-fine. 15g coffee to 250ml water at 92–94°C. Bloom 30 seconds, then pour in slow circles over 3 minutes.",
+      },
+      {
+        title: "French press",
+        body: "Grind coarse. 18g coffee to 300ml water at 96°C. Steep 4 minutes, break the crust, then plunge slowly.",
+      },
+      {
+        title: "Moka pot",
+        body: "Grind fine, level the basket without tamping. Brew on low-medium heat and pull off as soon as it sputters.",
+      },
+      {
+        title: "Storage",
+        body: "Keep the bag sealed and out of direct light. Best within 4 weeks of the roast date printed on the label.",
+      },
+    ],
+  };
   return (
     <>
       <HeroSlideshow
@@ -57,7 +129,7 @@ export function HomeView({ locale }: { locale: Locale }) {
         </Container>
       </HeroSlideshow>
 
-      <section className="bg-green-900 py-12 md:py-16">
+      <section className="bg-green-900 py-9 md:py-8">
         <Container>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {dict.stats.map((stat) => (
@@ -78,14 +150,20 @@ export function HomeView({ locale }: { locale: Locale }) {
         <Container>
           <div className="grid items-center gap-12 md:grid-cols-2">
             <Reveal>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
-                <Image
+              <div className="relative overflow-hidden rounded-lg">
+                <ProductGallery
+                  images={listStoryImage.images}
+                  prevLabel={dict.product.prevImageLabel}
+                  nextLabel={dict.product.nextImageLabel}
+                  main
+                />
+                {/* <Image
                   src="/assets/farm-harvest.jpg"
                   alt={dict.story.imageAlt}
                   fill
                   sizes="(min-width: 768px) 45vw, 90vw"
                   className="object-cover"
-                />
+                /> */}
               </div>
             </Reveal>
             <Reveal delayMs={80}>
@@ -171,22 +249,32 @@ export function HomeView({ locale }: { locale: Locale }) {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden bg-green-900 py-28 text-center md:py-36">
-        <Container>
-          <Reveal className="relative mx-auto flex max-w-3xl flex-col items-center">
-            <div className="relative flex flex-wrap items-center justify-center gap-4">
-              <span className="eyebrow inline-block -rotate-3 rounded-pill bg-gold-500 px-5 py-2 text-ink-900">
-                {dict.provenance.ribbon1}
-              </span>
-              <span className="eyebrow inline-block rotate-2 rounded-pill bg-gold-500 px-5 py-2 text-ink-900">
-                {dict.provenance.ribbon2}
-              </span>
-            </div>
-            <p className="mt-10 font-display text-display-md text-cream-050">
-              {dict.provenance.line}
-            </p>
-          </Reveal>
-        </Container>
+      <section className="relative overflow-hidden bg-green-900 text-center">
+        <HeroSlideshow
+          images={dict.hero.slideAlts2.map((alt, index) => ({
+            src: heroImages2[index],
+            alt,
+          }))}
+          prevLabel={dict.hero.prevLabel}
+          nextLabel={dict.hero.nextLabel}
+          slideLabel={dict.hero.slideLabel}
+        >
+          <Container>
+            <Reveal className="relative mx-auto flex max-w-3xl flex-col items-center">
+              <div className="relative flex flex-wrap items-center justify-center gap-4">
+                <span className="eyebrow inline-block -rotate-3 rounded-pill bg-gold-500 px-5 py-2 text-ink-900">
+                  {dict.provenance.ribbon1}
+                </span>
+                <span className="eyebrow inline-block rotate-2 rounded-pill bg-gold-500 px-5 py-2 text-ink-900">
+                  {dict.provenance.ribbon2}
+                </span>
+              </div>
+              <p className="mt-10 font-display text-display-md text-cream-050">
+                {dict.provenance.line}
+              </p>
+            </Reveal>
+          </Container>
+        </HeroSlideshow>
       </section>
 
       <section id="wholesale" className="py-24 md:py-32">

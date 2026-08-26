@@ -35,6 +35,7 @@ export interface Dictionary {
     ctaShop: string;
     ctaStory: string;
     slideAlts: string[];
+    slideAlts2: string[];
     prevLabel: string;
     nextLabel: string;
     slideLabel: string;
@@ -141,16 +142,27 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ctaStory: "Our story",
       slideAlts: [
         "Terraced Arabica coffee farm on a misty highland slope in Mai Sơn, Sơn La",
-        "Golden-hour view of highland coffee ridges above 1,400 meters in Sơn La, Vietnam",
+        "Golden-hour view of highland coffee ridges above 800 meters in Sơn La, Vietnam",
         "Highland coffee terraces at sunrise in Mai Sơn, Sơn La, Vietnam",
         "Bag of Maison Specialty coffee standing among honey-processed coffee cherries drying at the farm in Sơn La, Vietnam",
+      ],
+      slideAlts2: [
+        "Terraced Arabica coffee farm on a misty highland slope in Mai Sơn, Sơn La",
+        "Golden-hour view of highland coffee ridges above 800 meters in Sơn La, Vietnam",
+        "Golden-hour view of highland coffee ridges above 800 meters in Sơn La, Vietnam",
+        "Nương cà phê Arabica bậc thang trong sương sớm tại Mai Sơn, Sơn La",
+        "Highland coffee terraces at sunrise in Mai Sơn, Sơn La, Vietnam",
+        "Bag of Maison Specialty coffee standing among honey-processed coffee cherries drying at the farm in Sơn La, Vietnam",
+        "Highland coffee terraces at sunrise in Mai Sơn, Sơn La, Vietnam",
+        "Highland coffee terraces at sunrise in Mai Sơn, Sơn La, Vietnam",
+        "Highland coffee terraces at sunrise in Mai Sơn, Sơn La, Vietnam",
       ],
       prevLabel: "Previous slide",
       nextLabel: "Next slide",
       slideLabel: "Go to slide",
     },
     stats: [
-      { value: "1,400m+", label: "Growing altitude" },
+      { value: "800m+", label: "Growing altitude" },
       { value: "100%", label: "Highland Arabica" },
       { value: "Honey", label: "Processed at origin" },
       { value: "Direct", label: "From farmer partners" },
@@ -160,7 +172,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       heading: "Grown in the highlands of Sơn La",
       paragraphs: [
         "Maison Coffee was founded in Mai Sơn, Sơn La — the highland region with the largest Arabica-growing area in Vietnam.",
-        "We built our roastery at origin, above 1,400 meters, and work directly with the Thái, H'Mông and Kinh families who tend these hillsides.",
+        "We built our roastery at origin, above 800 meters, and work directly with the Thái, H'Mông and Kinh families who tend these hillsides.",
         "Every lot is honey-processed on raised beds in the highland sun, then roasted medium-light nearby — close enough to taste what changes when a bag travels only kilometers, not oceans, before it reaches your cup.",
       ],
       cta: "Partner with us",
@@ -184,7 +196,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           number: "03",
           title: "Small-batch roast",
-          body: "Medium-light, protecting origin character — never dark enough to hide the farm behind the roast.",
+          body: "Using PROBAT UG22 drum roaster with delicate profile to protecting origin character and maintain consistency — medium to light roast level to appreciate the farm behind the coffee tree.",
         },
         {
           number: "04",
@@ -264,7 +276,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       {
         question: "Where is Maison Coffee grown?",
         answer:
-          "In Mai Sơn, Sơn La — the highland region with the largest Arabica-growing area in Vietnam, above 1,400 meters, grown by our Thái, H'Mông and Kinh farmer partners.",
+          "In Mai Sơn, Sơn La — the highland region with the largest Arabica-growing area in Vietnam, above 800 meters, grown by our Thái, H'Mông and Kinh farmer partners.",
       },
       {
         question: "How is it processed?",
@@ -302,6 +314,16 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Những triền núi cà phê trên độ cao 1.400 mét ở Sơn La, Việt Nam lúc hoàng hôn",
         "Nương cà phê vùng cao lúc bình minh tại Mai Sơn, Sơn La, Việt Nam",
         "Túi cà phê Maison Specialty đặt giữa những mẻ cà phê chế biến honey đang phơi tại nông trại ở Sơn La, Việt Nam",
+      ],
+      slideAlts2: [
+        "Nương cà phê Arabica bậc thang trong sương sớm tại Mai Sơn, Sơn La",
+        "Những triền núi cà phê trên độ cao 1.400 mét ở Sơn La, Việt Nam lúc hoàng hôn",
+        "Nương cà phê Arabica bậc thang trong sương sớm tại Mai Sơn, Sơn La",
+        "Nương cà phê vùng cao lúc bình minh tại Mai Sơn, Sơn La, Việt Nam",
+        "Túi cà phê Maison Specialty đặt giữa những mẻ cà phê chế biến honey đang phơi tại nông trại ở Sơn La, Việt Nam",
+        "Nương cà phê vùng cao lúc bình minh tại Mai Sơn, Sơn La, Việt Nam",
+        "Nương cà phê vùng cao lúc bình minh tại Mai Sơn, Sơn La, Việt Nam",
+        "Nương cà phê vùng cao lúc bình minh tại Mai Sơn, Sơn La, Việt Nam",
       ],
       prevLabel: "Ảnh trước",
       nextLabel: "Ảnh tiếp theo",
