@@ -29,8 +29,6 @@ export function ProductView({
     { label: dict.product.flavorLabel, value: product.flavorNotes.join(" · ") },
   ];
 
-  console.log("product", product);
-
   return (
     <>
       <section className="py-10 md:py-14">

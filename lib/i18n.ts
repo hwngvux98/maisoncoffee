@@ -142,9 +142,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ctaStory: "Our story",
       slideAlts: [
         "Terraced Arabica coffee farm on a misty highland slope in Mai Sơn, Sơn La",
-        "Golden-hour view of highland coffee ridges above 800 meters in Sơn La, Vietnam",
-        "Highland coffee terraces at sunrise in Mai Sơn, Sơn La, Vietnam",
-        "Bag of Maison Specialty coffee standing among honey-processed coffee cherries drying at the farm in Sơn La, Vietnam",
+        "Ripe Arabica coffee cherries ready for hand-picking on the branch in Sơn La, Vietnam",
+        "A H'Mông farmer hand-picking ripe coffee cherries on a hillside in Mai Sơn, Sơn La",
+        "Freshly picked coffee cherries held in the hands of Maison's farmer partners in Sơn La, Vietnam",
       ],
       slideAlts2: [
         "Terraced Arabica coffee farm on a misty highland slope in Mai Sơn, Sơn La",
@@ -309,9 +309,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ctaStory: "Câu chuyện của chúng tôi",
       slideAlts: [
         "Nương cà phê Arabica bậc thang trong sương sớm tại Mai Sơn, Sơn La",
-        "Những triền núi cà phê trên độ cao 1.400 mét ở Sơn La, Việt Nam lúc hoàng hôn",
-        "Nương cà phê vùng cao lúc bình minh tại Mai Sơn, Sơn La, Việt Nam",
-        "Túi cà phê Maison Specialty đặt giữa những mẻ cà phê chế biến honey đang phơi tại nông trại ở Sơn La, Việt Nam",
+        "Quả cà phê Arabica chín mọng sẵn sàng thu hái bằng tay tại Sơn La, Việt Nam",
+        "Người nông dân H'Mông hái cà phê chín trên nương đồi tại Mai Sơn, Sơn La",
+        "Cà phê vừa hái được nâng niu trên tay các nông dân đối tác của Maison tại Sơn La, Việt Nam",
       ],
       slideAlts2: [
         "Nương cà phê Arabica bậc thang trong sương sớm tại Mai Sơn, Sơn La",

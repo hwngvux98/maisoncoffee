@@ -16,19 +16,19 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
   page.on("console", (m) => m.type() === "error" && consoleErrors.push(m.text()));
   page.on("pageerror", (e) => consoleErrors.push(String(e)));
 
-  await page.goto(`${BASE}/shop/whole-bean-250g`, { waitUntil: "networkidle" });
+  await page.goto(`${BASE}/shop/whole-bean-250g`, { waitUntil: "load" });
 
   const gallery = page.locator('[role="group"][aria-label="Product photos"]');
   log("Gallery renders", await gallery.isVisible());
 
   const thumbs = page.locator('button[aria-label^="View image"]');
-  log("3 thumbnails render", (await thumbs.count()) === 3, `count=${await thumbs.count()}`);
+  log("4 thumbnails render", (await thumbs.count()) === 4, `count=${await thumbs.count()}`);
 
   // Click second thumbnail, check aria-current + live region updates
   await thumbs.nth(1).click();
   await page.waitForTimeout(350);
   const liveText1 = await gallery.locator('[aria-live="polite"]').textContent();
-  log("Live region updates after thumbnail click", liveText1?.includes("Terraced Arabica"), `text=${liveText1}`);
+  log("Live region updates after thumbnail click", liveText1?.includes("honey-processed"), `text=${liveText1}`);
   log("Second thumbnail marked aria-current", (await thumbs.nth(1).getAttribute("aria-current")) === "true");
 
   // Keyboard navigation
@@ -36,7 +36,7 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
   await page.keyboard.press("ArrowRight");
   await page.waitForTimeout(350);
   const liveText2 = await gallery.locator('[aria-live="polite"]').textContent();
-  log("ArrowRight advances image", liveText2?.includes("Highland coffee ridges"), `text=${liveText2}`);
+  log("ArrowRight advances image", liveText2?.includes("Pour-over brewing"), `text=${liveText2}`);
 
   await page.keyboard.press("ArrowLeft");
   await page.keyboard.press("ArrowLeft");
@@ -48,7 +48,7 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
   await page.locator('button[aria-label="Next image"]').click();
   await page.waitForTimeout(350);
   const liveText4 = await gallery.locator('[aria-live="polite"]').textContent();
-  log("Next button advances", liveText4?.includes("Terraced Arabica"), `text=${liveText4}`);
+  log("Next button advances", liveText4?.includes("honey-processed"), `text=${liveText4}`);
 
   // Swipe simulation via touch events dispatched on the gallery element
   const box = await gallery.boundingBox();
@@ -66,7 +66,7 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
   }
   await page.waitForTimeout(350);
   const liveText5 = await gallery.locator('[aria-live="polite"]').textContent();
-  log("Swipe left advances to next image", liveText5?.includes("Highland coffee ridges"), `text=${liveText5}`);
+  log("Swipe left advances to next image", liveText5?.includes("Pour-over brewing"), `text=${liveText5}`);
 
   log("No console errors", consoleErrors.length === 0, consoleErrors.join(" | "));
   await page.close();
