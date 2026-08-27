@@ -20,3 +20,10 @@ export const interTight = localFont({
   weight: "100 900",
   display: "swap",
 });
+
+export const crimson = localFont({
+  src: "./fonts/CrimsonText-Bold.ttf",
+  variable: "--font-crimson-text",
+  weight: "100 900",
+  display: "swap",
+});

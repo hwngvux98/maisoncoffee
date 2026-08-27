@@ -83,11 +83,11 @@ export function HeroSlideshow({
         }}
       />
 
-      <div className="relative z-10 w-full pb-16 pt-32 md:pb-24">
+      <div className="relative z-10 w-full pb-18 pt-32 md:pb-28">
         {children}
       </div>
 
-      <div className="absolute bottom-8 right-6 z-10 flex items-center gap-4 md:right-10">
+      <div className="absolute bottom-4 right-6 z-10 flex items-center gap-4 md:right-10">
         <button
           type="button"
           onClick={() => goTo(active - 1)}
