@@ -32,15 +32,22 @@ export function Header({
     <>
       <header className="sticky top-0 z-40 border-b border-line bg-cream-100/95 backdrop-blur">
         <Container className="flex h-20 items-center justify-between">
-          <Link href={homeHref(locale)} aria-label="Maison Coffee, home">
+          {/* <Link href={homeHref(locale)} aria-label="Maison Coffee, home">
             <Image
               src="/assets/logo-maison-green.png"
               alt="Maison Coffee"
               width={800}
               height={800}
               priority
-              className="h-12 w-12"
+              className="h-24 w-24"
             />
+          </Link> */}
+
+          <Link
+            href={homeHref(locale)}
+            className="font-display text-heading-md text-green-700"
+          >
+            MAISON COFFEE
           </Link>
 
           <nav

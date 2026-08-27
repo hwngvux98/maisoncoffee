@@ -102,7 +102,7 @@ export function HomeView({ locale }: { locale: Locale }) {
         <Container>
           <div className="max-w-2xl">
             <p className="eyebrow text-gold-300">{dict.hero.eyebrow}</p>
-            <h1 className="mt-4 font-display text-display-xl text-cream-050">
+            <h1 className="mt-4 font-display text-display-lg text-cream-050">
               {dict.hero.heading}
             </h1>
             <p className="mt-6 max-w-xl text-body-lg text-cream-050/90">

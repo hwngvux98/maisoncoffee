@@ -14,13 +14,16 @@ export function Footer({
     <footer className="bg-green-900 text-cream-050">
       <Container className="grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          <Image
-            src="/assets/logo-maison-yellow.png"
+          {/* <Image
+            src="/assets/logo-maison-beige.png"
             alt="Maison Coffee"
             width={1942}
             height={1776}
-            className="h-14 w-auto"
-          />
+            className="h-30 w-auto"
+          /> */}
+          <p className="font-display text-heading-md text-cream-050">
+            MAISON COFFEE
+          </p>
           <p className="mt-3 max-w-xs text-body-sm text-cream-050/70">
             {dict.description}
           </p>
