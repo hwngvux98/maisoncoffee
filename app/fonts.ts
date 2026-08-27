@@ -22,8 +22,11 @@ export const interTight = localFont({
 });
 
 export const crimson = localFont({
-  src: "./fonts/CrimsonText-Bold.ttf",
+  src: [
+    { path: "./fonts/CrimsonText-Regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/CrimsonText-SemiBold.ttf", weight: "600", style: "normal" },
+    { path: "./fonts/CrimsonText-Bold.ttf", weight: "700", style: "normal" },
+  ],
   variable: "--font-crimson-text",
-  weight: "100 900",
   display: "swap",
 });
