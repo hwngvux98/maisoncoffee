@@ -45,6 +45,10 @@ const flavorNotes = ["Caramel", "Dark chocolate", "Black tea"] as const;
 
 const wholeBeanBrewGuides: readonly BrewGuide[] = [
   {
+    title: "Espresso",
+    body: "Grind fine. 18g coffee in, 36g out in 25–30 seconds at 9 bars. Grind finer if it runs fast, coarser if it stalls.",
+  },
+  {
     title: "Pour-over",
     body: "Grind medium-fine. 15g coffee to 250ml water at 92–94°C. Bloom 30 seconds, then pour in slow circles over 3 minutes.",
   },
