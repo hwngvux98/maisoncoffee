@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, ShoppingBag } from "lucide-react";
 import { Container } from "@/components/Container";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { MobileMenu } from "@/components/MobileMenu";
 import { useCartStore, cartCount } from "@/lib/cart-store";
 import { homeHref, localeHref, type Dictionary, type Locale } from "@/lib/i18n";
@@ -66,6 +67,7 @@ export function Header({
           </nav>
 
           <div className="flex items-center gap-3">
+            <LanguageSwitcher locale={locale} />
             <Link
               href={localeHref(locale, "/shop")}
               className="hidden h-11 items-center justify-center rounded-pill bg-gold-500 px-6 text-body-md font-medium text-ink-900 transition-colors duration-150 ease-brand hover:bg-gold-600 sm:flex"

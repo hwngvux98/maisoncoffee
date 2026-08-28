@@ -32,17 +32,14 @@
   --line-strong: rgba(27, 33, 26, 0.24);
   --line-inverse: rgba(251, 248, 236, 0.24);
 
-  /* Display font: Young Serif for English, swapped to Crimson Text
-     for the Vietnamese locale via the [lang="vi"] override below. */
+  /* Indirection so the display font can be swapped per locale by
+     overriding this one variable (e.g. `[lang="vi"] { --font-display-active: ... }`)
+     without touching Tailwind's inlined --font-display theme token. */
   --font-display-active: var(--font-young-serif);
 
   --shadow-color-sm: 27, 33, 26;
   --shadow-color-md: 20, 40, 24;
   --shadow-color-lg: 20, 40, 24;
-}
-
-[lang="vi"] {
-  --font-display-active: var(--font-crimson-text);
 }
 
 @theme inline {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { youngSerif, regloBold, interTight, crimson } from "@/app/fonts";
+import { youngSerif, regloBold, interTight } from "@/app/fonts";
 import { CartHydration } from "@/components/CartHydration";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/json-ld";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${youngSerif.variable} ${regloBold.variable} ${interTight.variable} ${crimson.variable}`}
+      className={`${youngSerif.variable} ${regloBold.variable} ${interTight.variable}`}
     >
       <body className="min-h-screen bg-cream-100 text-ink-900 antialiased">
         <script

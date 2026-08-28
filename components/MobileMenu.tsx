@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { X } from "lucide-react";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useOverlay } from "@/lib/use-overlay";
 import { localeHref, type Locale } from "@/lib/i18n";
 
@@ -35,14 +36,17 @@ export function MobileMenu({
       >
         <div className="flex h-20 items-center justify-between px-6">
           <span className="font-display text-heading-md text-cream-050">maison coffee</span>
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label={closeLabel}
-            className="flex h-11 w-11 items-center justify-center rounded-full text-cream-050"
-          >
-            <X size={22} strokeWidth={1.5} aria-hidden="true" />
-          </button>
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher locale={locale} variant="dark" onNavigate={onClose} />
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label={closeLabel}
+              className="flex h-11 w-11 items-center justify-center rounded-full text-cream-050"
+            >
+              <X size={22} strokeWidth={1.5} aria-hidden="true" />
+            </button>
+          </div>
         </div>
         <nav className="flex flex-1 flex-col justify-center gap-6 px-6" aria-label="Mobile">
           {links.map((link) => (
