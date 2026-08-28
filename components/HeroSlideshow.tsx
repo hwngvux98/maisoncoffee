@@ -16,18 +16,21 @@ const FADE_MS = 1100;
 
 export function HeroSlideshow({
   images,
+  showImageText = false,
   prevLabel,
   nextLabel,
   slideLabel,
   children,
 }: {
   images: { src: string; alt: string }[];
+  showImageText?: boolean;
   prevLabel: string;
   nextLabel: string;
   slideLabel: string;
   children: ReactNode;
 }) {
   const [active, setActive] = useState(0);
+  const [imageText, setImageText] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const reducedMotion = usePrefersReducedMotion();
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -35,6 +38,7 @@ export function HeroSlideshow({
   const goTo = useCallback(
     (index: number) => {
       setActive(((index % images.length) + images.length) % images.length);
+      setImageText(((index % images.length) + images.length) % images.length);
     },
     [images.length]
   );
@@ -82,11 +86,16 @@ export function HeroSlideshow({
             "linear-gradient(to top, rgba(18,48,26,0.86), rgba(18,48,26,0.30))",
         }}
       />
-
       <div className="relative z-10 w-full pb-18 pt-32 md:pb-28">
         {children}
       </div>
-
+      {showImageText && (
+        <div className="absolute w-full top-0">
+          <p className="md:mx-50 my-2 rounded-3xl items-center font-display text-display-md backdrop-blur-xs px-10 py-3 text-cream-050">
+            {images[imageText].alt}
+          </p>
+        </div>
+      )}
       <div className="absolute bottom-4 right-6 z-10 flex items-center gap-4 md:right-10">
         <button
           type="button"

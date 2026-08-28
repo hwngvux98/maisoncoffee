@@ -38,7 +38,7 @@ export function ProductView({
             className="mb-8 flex items-center gap-2 text-body-sm text-ink-500"
           >
             <Link href={homeHref(locale)} className="hover:text-green-700">
-              maison coffee
+              MAISƠN COFFEE
             </Link>
             <ChevronRight size={14} strokeWidth={1.5} aria-hidden="true" />
             <Link

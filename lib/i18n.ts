@@ -135,9 +135,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     hero: {
       eyebrow: "From Mai Son · Son La · Vietnam",
-      heading: "Coffee grown in the clouds",
+      heading: "VIETNAM ARABICA Coffee grown in the clouds",
       subhead:
-        "Specialty Arabica roasted at origin in Vietnam's northwest region — honey-processed by the ethnic farmers who grow it.",
+        "Specialty Arabica roasted at origin in Vietnam's northwest region — honey-processed by the ethnic farmers who nurturing the coffee tree.",
       ctaShop: "Shop the collection",
       ctaStory: "Our story",
       slideAlts: [
@@ -147,13 +147,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Freshly picked coffee cherries held in the hands of Maison's farmer partners in Sơn La, Vietnam",
       ],
       slideAlts2: [
-        "Terraced Arabica coffee farm on a misty highland slope in Mai Sơn, Sơn La",
-        "Golden-hour view of highland coffee ridges above 800 meters in Sơn La, Vietnam",
-        "Golden-hour view of highland coffee ridges above 800 meters in Sơn La, Vietnam",
-        "Nương cà phê Arabica bậc thang trong sương sớm tại Mai Sơn, Sơn La",
-        "Highland coffee terraces at sunrise in Mai Sơn, Sơn La, Vietnam",
-        "Bag of Maison Specialty coffee standing among honey-processed coffee cherries drying at the farm in Sơn La, Vietnam",
-        "Highland coffee terraces at sunrise in Mai Sơn, Sơn La, Vietnam",
+        "COFFEE SHOW HANOI 2025",
+        "COFFEE SHOW SEOUL 2025",
+        "WORLD OF COFFEE BANGKOK 2026",
+        "COFFEE SHOW SEOUL 2025",
+        "VIETNAM EXPO 2026",
+        "VIETNAM EXPO 2026",
+        "SEOUL FOOD 2025",
       ],
       prevLabel: "Previous slide",
       nextLabel: "Next slide",
@@ -304,7 +304,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       eyebrow: "Từ Mai Sơn · Sơn La · Việt Nam",
       heading: "Cà phê trồng trong mây",
       subhead:
-        "Cà phê Arabica đặc sản rang tại vùng nguyên liệu tây bắc Việt Nam — chế biến honey bởi chính những người nông dân trồng nên nó.",
+        "Cà phê Arabica đặc sản rang tại vùng nguyên liệu tây bắc Việt Nam — được sơ chế honey/wash bởi chính những người nông dân nuôi dưỡng cây cà phê.",
       ctaShop: "Xem bộ sưu tập",
       ctaStory: "Câu chuyện của chúng tôi",
       slideAlts: [

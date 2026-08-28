@@ -245,6 +245,7 @@ export function HomeView({ locale }: { locale: Locale }) {
             src: heroImages2[index],
             alt,
           }))}
+          showImageText
           prevLabel={dict.hero.prevLabel}
           nextLabel={dict.hero.nextLabel}
           slideLabel={dict.hero.slideLabel}

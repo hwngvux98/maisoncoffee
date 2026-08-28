@@ -20,8 +20,8 @@ export function Footer({
             height={1776}
             className="h-30 w-auto"
           /> */}
-          <p className="font-display text-heading-md text-cream-050">
-            MAISON COFFEE
+          <p className="font-display text-heading-lg text-cream-050">
+            MAISƠN COFFEE
           </p>
           <p className="mt-3 max-w-xs text-body-sm text-cream-050/70">
             {dict.description}
