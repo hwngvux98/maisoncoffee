@@ -45,9 +45,9 @@ export function Header({
 
           <Link
             href={homeHref(locale)}
-            className="font-display text-heading-md text-green-700"
+            className="font-display text-heading-lg text-green-700"
           >
-            MAISON COFFEE
+            MAISƠN COFFEE
           </Link>
 
           <nav

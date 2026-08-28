@@ -9,7 +9,7 @@ export const contentType = "image/png";
 
 export default async function Image() {
   const youngSerif = await readFile(
-    join(process.cwd(), "app/fonts/YoungSerif-Regular.ttf")
+    join(process.cwd(), "app/fonts/YoungSerif-Bold.ttf")
   );
   const reglo = await readFile(join(process.cwd(), "app/fonts/Reglo-Bold.otf"));
 
