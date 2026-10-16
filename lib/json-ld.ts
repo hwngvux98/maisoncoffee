@@ -1,6 +1,7 @@
 import type { Product } from "@/lib/products";
-import type { FaqItem } from "@/lib/i18n";
-import { CONTACT_EMAIL, SITE_NAME, SITE_URL } from "@/lib/site";
+import type { FaqItem, Locale } from "@/lib/i18n";
+import { localeHref } from "@/lib/i18n";
+import { CONTACT_EMAIL, INSTAGRAM_URL, SITE_NAME, SITE_URL } from "@/lib/site";
 
 export function organizationJsonLd() {
   return {
@@ -9,6 +10,7 @@ export function organizationJsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     email: CONTACT_EMAIL,
+    sameAs: [INSTAGRAM_URL],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Mai Sơn",
@@ -27,8 +29,8 @@ export function websiteJsonLd() {
   };
 }
 
-export function productJsonLd(product: Product, locale: "en" | "vi") {
-  const path = locale === "en" ? `/shop/${product.slug}` : `/vi/shop/${product.slug}`;
+export function productJsonLd(product: Product, locale: Locale) {
+  const path = localeHref(locale, `/shop/${product.slug}`);
   return {
     "@context": "https://schema.org",
     "@type": "Product",

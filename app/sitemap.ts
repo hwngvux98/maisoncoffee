@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           en: `${SITE_URL}${path}`,
           vi: `${SITE_URL}/vi${path}`,
+          zh: `${SITE_URL}/zh${path}`,
         },
       },
     });
@@ -28,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           en: `${SITE_URL}${path}`,
           vi: `${SITE_URL}/vi${path}`,
+          zh: `${SITE_URL}/zh${path}`,
         },
       },
     });

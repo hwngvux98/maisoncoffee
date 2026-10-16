@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { z } from "zod";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 const wholesaleSchema = z.object({
   businessName: z.string().trim().min(1).max(200),
@@ -26,7 +27,7 @@ export async function POST(request: Request) {
 
   const { error } = await resend.emails.send({
     from: "Maison Coffee Wholesale <wholesale@maisoncoffee.vn>",
-    to: "hello@maisoncoffee.vn",
+    to: CONTACT_EMAIL,
     replyTo: workEmail,
     subject: `Sample kit request — ${businessName}`,
     text: `New wholesale sample kit request\n\nBusiness name: ${businessName}\nWork email: ${workEmail}`,

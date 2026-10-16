@@ -95,9 +95,7 @@ export function CartView({ locale, dict }: { locale: Locale; dict: Dictionary["c
             </button>
             {checkoutNotice && (
               <p className="mt-3 text-body-sm text-ink-500" role="status">
-                {locale === "vi"
-                  ? "Thanh toán trực tuyến sắp ra mắt — vui lòng email hello@maisoncoffee.vn để đặt hàng."
-                  : "Online checkout is coming soon — email hello@maisoncoffee.vn to place this order."}
+                {dict.checkoutNotice}
               </p>
             )}
             <Link

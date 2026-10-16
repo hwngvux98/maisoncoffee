@@ -1,4 +1,12 @@
-export type Locale = "en" | "vi";
+import { CONTACT_EMAIL } from "@/lib/site";
+
+export type Locale = "en" | "vi" | "zh";
+
+const localePrefixes: Record<Locale, string> = {
+  en: "",
+  vi: "/vi",
+  zh: "/zh",
+};
 
 export interface StatItem {
   value: string;
@@ -80,6 +88,12 @@ export interface Dictionary {
     shopHeading: string;
     companyHeading: string;
     contactHeading: string;
+    shopAllLink: string;
+    cartLink: string;
+    ourStoryLink: string;
+    roastingLink: string;
+    wholesaleLink: string;
+    address: string;
     copyright: string;
   };
   shop: {
@@ -113,6 +127,7 @@ export interface Dictionary {
     subtotal: string;
     shippingNote: string;
     checkout: string;
+    checkoutNotice: string;
     remove: string;
     quantityLabel: string;
     continueShopping: string;
@@ -223,8 +238,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       submit: "Request sample kit",
       submitting: "Sending…",
       success: "Thank you — we'll be in touch about your sample kit shortly.",
-      error:
-        "Something went wrong sending your request. Please try again or email hello@maisoncoffee.vn directly.",
+      error: `Something went wrong sending your request. Please try again or email ${CONTACT_EMAIL} directly.`,
     },
     footer: {
       description:
@@ -232,6 +246,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
       shopHeading: "Shop",
       companyHeading: "Company",
       contactHeading: "Contact",
+      shopAllLink: "All coffee",
+      cartLink: "Cart",
+      ourStoryLink: "Our story",
+      roastingLink: "Roasting",
+      wholesaleLink: "Wholesale",
+      address: "Mai Sơn, Sơn La, Vietnam",
       copyright: "© 2026 Maison Coffee · Mai Sơn, Sơn La, Vietnam",
     },
     shop: {
@@ -266,6 +286,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       subtotal: "Subtotal",
       shippingNote: "Shipping & taxes calculated at checkout",
       checkout: "Checkout",
+      checkoutNotice: `Online checkout is coming soon — email ${CONTACT_EMAIL} to place this order.`,
       remove: "Remove",
       quantityLabel: "Quantity",
       continueShopping: "Continue shopping",
@@ -394,8 +415,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       submit: "Yêu cầu bộ mẫu thử",
       submitting: "Đang gửi…",
       success: "Cảm ơn bạn — chúng tôi sẽ liên hệ sớm về bộ mẫu thử.",
-      error:
-        "Có lỗi khi gửi yêu cầu. Vui lòng thử lại hoặc gửi email trực tiếp đến hello@maisoncoffee.vn.",
+      error: `Có lỗi khi gửi yêu cầu. Vui lòng thử lại hoặc gửi email trực tiếp đến ${CONTACT_EMAIL}.`,
     },
     footer: {
       description:
@@ -403,6 +423,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
       shopHeading: "Cửa hàng",
       companyHeading: "Công ty",
       contactHeading: "Liên hệ",
+      shopAllLink: "Tất cả cà phê",
+      cartLink: "Giỏ hàng",
+      ourStoryLink: "Câu chuyện",
+      roastingLink: "Rang xay",
+      wholesaleLink: "Bán sỉ",
+      address: "Mai Sơn, Sơn La, Việt Nam",
       copyright: "© 2026 Maison Coffee · Mai Sơn, Sơn La, Việt Nam",
     },
     shop: {
@@ -437,6 +463,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       subtotal: "Tạm tính",
       shippingNote: "Phí vận chuyển & thuế được tính khi thanh toán",
       checkout: "Thanh toán",
+      checkoutNotice: `Thanh toán trực tuyến sắp ra mắt — vui lòng email ${CONTACT_EMAIL} để đặt hàng.`,
       remove: "Xóa",
       quantityLabel: "Số lượng",
       continueShopping: "Tiếp tục mua sắm",
@@ -459,6 +486,176 @@ export const dictionaries: Record<Locale, Dictionary> = {
       },
     ],
   },
+  zh: {
+    locale: "zh",
+    nav: {
+      coffee: "咖啡",
+      story: "品牌故事",
+      roasting: "烘焙工艺",
+      wholesale: "批发合作",
+      shop: "商店",
+      cartLabel: "打开购物车",
+      menuLabel: "打开菜单",
+      closeMenuLabel: "关闭菜单",
+    },
+    hero: {
+      eyebrow: "来自 梅山 · 山罗省 · 越南",
+      heading: "云端生长的越南阿拉比卡咖啡",
+      subhead:
+        "产自越南西北产区的精品阿拉比卡咖啡,由悉心照料咖啡树的少数民族农户以蜜处理法加工,并在产地现场烘焙。",
+      ctaShop: "选购咖啡",
+      ctaStory: "品牌故事",
+      slideAlts: [
+        "越南山罗省梅山云雾缭绕的阶梯状阿拉比卡咖啡田",
+        "越南山罗省枝头上准备手工采摘的成熟阿拉比卡咖啡果",
+        "一位苗族农户在山罗省梅山的山坡上手工采摘成熟咖啡果",
+        "越南山罗省 Maison 农户伙伴手中刚采摘的新鲜咖啡果",
+      ],
+      slideAlts2: [
+        "COFFEE SHOW HANOI 2025",
+        "COFFEE SHOW SEOUL 2025",
+        "WORLD OF COFFEE BANGKOK 2026",
+        "COFFEE SHOW SEOUL 2025",
+        "VIETNAM EXPO 2026",
+        "VIETNAM EXPO 2026",
+        "SEOUL FOOD 2025",
+      ],
+      prevLabel: "上一张",
+      nextLabel: "下一张",
+      slideLabel: "跳转到幻灯片",
+    },
+    stats: [
+      { value: "800米+", label: "种植海拔" },
+      { value: "100%", label: "高地阿拉比卡" },
+      { value: "蜜处理", label: "产地加工" },
+      { value: "直采", label: "来自农户伙伴" },
+    ],
+    story: {
+      eyebrow: "产地故事",
+      heading: "生长于山罗省高地",
+      paragraphs: [
+        "Maison Coffee 创立于越南山罗省梅山——越南阿拉比卡咖啡种植面积最大的高地产区。",
+        "我们在海拔800米以上的产地建立了自己的烘焙工坊,与悉心照料这些山坡的泰族、苗族和京族家庭直接合作。",
+        "每一批咖啡都在高地阳光下的晒架上进行蜜处理,随后就近以中浅烘焙完成——近到足以品尝出咖啡只需跨越几十公里、而非远渡重洋抵达您杯中时的那份不同。",
+      ],
+      cta: "与我们合作",
+      imageAlt: "咖啡农户在越南山罗省梅山的阶梯状山坡上照料阿拉比卡咖啡果",
+    },
+    roasting: {
+      eyebrow: "工艺",
+      heading: "从咖啡果到咖啡杯,产地现场烘焙",
+      steps: [
+        {
+          number: "01",
+          title: "精选采摘",
+          body: "只手工采摘完全成熟的咖啡果,对每一行咖啡树多次巡回采摘。",
+        },
+        {
+          number: "02",
+          title: "蜜处理加工",
+          body: "保留果胶层,在高地阳光下的晒架上晾晒——这正是醇厚口感与焦糖甜味的来源。",
+        },
+        {
+          number: "03",
+          title: "小批量烘焙",
+          body: "使用 PROBAT UG22 滚筒烘焙机,以细致的烘焙曲线保护产地风味并保持一致性——中浅烘焙,呈现咖啡树背后的那片土地。",
+        },
+        {
+          number: "04",
+          title: "新鲜密封",
+          body: "烘焙后数日内完成包装,每袋均印有烘焙日期。",
+        },
+      ],
+    },
+    featured: {
+      heading: "精选咖啡",
+      viewAll: "查看全部咖啡 →",
+    },
+    provenance: {
+      ribbon1: "来自山罗省,",
+      ribbon2: "越南",
+      line: "我们怀抱热忱,致力于将故乡群山独有的风味分享给世界。",
+    },
+    wholesale: {
+      eyebrow: "批发与出口",
+      heading: "面向咖啡馆、烘焙商与出口合作伙伴",
+      body: "我们可批量供应高地阿拉比卡生豆与熟豆,从农场、产区、海拔到加工方式均可完整溯源,并提供寄往全球的样品套装,方便您在下单前先行试饮。",
+      tags: ["完整溯源", "生豆或熟豆", "全球配送"],
+      formTitle: "申请样品套装",
+      businessNameLabel: "公司名称",
+      workEmailLabel: "工作邮箱",
+      submit: "申请样品套装",
+      submitting: "发送中…",
+      success: "感谢您的申请——我们会尽快就样品套装与您联系。",
+      error: `发送请求时出现问题,请重试,或直接发邮件至 ${CONTACT_EMAIL}。`,
+    },
+    footer: {
+      description: "产自越南山罗省高地、产地现场烘焙的精品阿拉比卡咖啡。",
+      shopHeading: "商店",
+      companyHeading: "公司",
+      contactHeading: "联系方式",
+      shopAllLink: "全部咖啡",
+      cartLink: "购物车",
+      ourStoryLink: "品牌故事",
+      roastingLink: "烘焙工艺",
+      wholesaleLink: "批发合作",
+      address: "越南山罗省梅山",
+      copyright: "© 2026 Maison Coffee · 越南山罗省梅山",
+    },
+    shop: {
+      eyebrow: "咖啡系列",
+      heading: "高地阿拉比卡,适配每一种冲煮方式",
+      subhead: "越南山罗省单一产区咖啡——整豆自行研磨,或挂耳咖啡随时随地享用。",
+      addToCart: "加入购物车",
+      vatNote: "含增值税",
+    },
+    product: {
+      addToCart: "加入购物车",
+      quantityLabel: "数量",
+      specTitle: "产品规格",
+      brewingTitle: "冲煮指南",
+      crossSellTitle: "您可能也会喜欢",
+      farmLabel: "农场",
+      regionLabel: "产区",
+      altitudeLabel: "海拔",
+      processLabel: "加工方式",
+      roastLabel: "烘焙度",
+      flavorLabel: "风味特征",
+      vatNote: "含增值税",
+      breadcrumbShop: "商店",
+      prevImageLabel: "上一张图片",
+      nextImageLabel: "下一张图片",
+    },
+    cart: {
+      title: "您的购物车",
+      empty: "您的购物车是空的。",
+      browse: "浏览咖啡",
+      subtotal: "小计",
+      shippingNote: "运费及税费将在结算时计算",
+      checkout: "结算",
+      checkoutNotice: `在线结算即将上线——请发邮件至 ${CONTACT_EMAIL} 下单。`,
+      remove: "移除",
+      quantityLabel: "数量",
+      continueShopping: "继续选购",
+    },
+    faq: [
+      {
+        question: "Maison Coffee 的咖啡产自哪里?",
+        answer:
+          "产自越南山罗省梅山——越南阿拉比卡咖啡种植面积最大的高地产区,海拔800米以上,由我们的泰族、苗族和京族农户伙伴种植。",
+      },
+      {
+        question: "咖啡是如何加工的?",
+        answer:
+          "采用蜜处理法:保留果胶层,在高地阳光下的晒架上晾晒,随后在我们位于产地的烘焙工坊以中浅烘焙完成。",
+      },
+      {
+        question: "是否为咖啡馆或出口合作伙伴供货?",
+        answer:
+          "是的。我们可批量供应高地阿拉比卡生豆与熟豆,提供完整的产地、产区、海拔与加工方式溯源,并提供寄往全球的样品套装。",
+      },
+    ],
+  },
 };
 
 export function getDictionary(locale: Locale): Dictionary {
@@ -466,9 +663,9 @@ export function getDictionary(locale: Locale): Dictionary {
 }
 
 export function localeHref(locale: Locale, path: string): string {
-  return locale === "en" ? path : `/vi${path}`;
+  return `${localePrefixes[locale]}${path}`;
 }
 
 export function homeHref(locale: Locale): string {
-  return locale === "en" ? "/" : "/vi";
+  return localePrefixes[locale] || "/";
 }

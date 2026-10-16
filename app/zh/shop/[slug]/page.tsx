@@ -1,0 +1,70 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { ProductView } from "@/components/shop/ProductView";
+import { getProductBySlug, products } from "@/lib/products";
+import { breadcrumbJsonLd, productJsonLd } from "@/lib/json-ld";
+import { formatVnd } from "@/lib/format";
+
+export function generateStaticParams() {
+  return products.map((product) => ({ slug: product.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
+  if (!product) return {};
+
+  const title = `${product.name} — ${product.variant}`;
+  const description = `${product.flavorNotes.join("、")}。${product.spec.process}加工,${product.spec.roast}烘焙,${formatVnd(product.priceVnd)} — 产自${product.spec.region},海拔${product.spec.altitude}。`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/zh/shop/${slug}`,
+      languages: {
+        en: `/shop/${slug}`,
+        vi: `/vi/shop/${slug}`,
+        zh: `/zh/shop/${slug}`,
+        "x-default": `/shop/${slug}`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      images: [{ url: product.image, alt: product.imageAlt }],
+    },
+  };
+}
+
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
+  if (!product) notFound();
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd(product, "zh")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "首页", path: "/zh" },
+              { name: "商店", path: "/zh/shop" },
+              { name: product.name, path: `/zh/shop/${product.slug}` },
+            ])
+          ),
+        }}
+      />
+      <ProductView product={product} locale="zh" />
+    </>
+  );
+}

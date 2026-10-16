@@ -29,6 +29,7 @@ export async function generateMetadata({
       languages: {
         en: `/shop/${slug}`,
         vi: `/vi/shop/${slug}`,
+        zh: `/zh/shop/${slug}`,
         "x-default": `/shop/${slug}`,
       },
     },

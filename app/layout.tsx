@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: SITE_NAME,
     locale: "en_US",
-    alternateLocale: ["vi_VN"],
+    alternateLocale: ["vi_VN", "zh_CN"],
     url: SITE_URL,
     title:
       "Maison Coffee — Specialty Arabica Roasted at Origin in Sơn La, Vietnam",

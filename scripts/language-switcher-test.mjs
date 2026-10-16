@@ -19,10 +19,15 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
   await page.waitForURL(`${BASE}/vi`);
   log("EN home -> VI home", page.url() === `${BASE}/vi`, `url=${page.url()}`);
 
-  // VI home -> EN home
+  // VI home -> 中文 home
+  await page.locator('header a:has-text("中文")').first().click();
+  await page.waitForURL(`${BASE}/zh`);
+  log("VI home -> ZH home", page.url() === `${BASE}/zh`, `url=${page.url()}`);
+
+  // ZH home -> EN home
   await page.locator('header a:has-text("EN")').first().click();
   await page.waitForURL(`${BASE}/`);
-  log("VI home -> EN home", page.url() === `${BASE}/`, `url=${page.url()}`);
+  log("ZH home -> EN home", page.url() === `${BASE}/`, `url=${page.url()}`);
 
   // EN product page -> VI product page (path preserved)
   await page.goto(`${BASE}/shop/whole-bean-250g`, { waitUntil: "load" });
@@ -34,11 +39,20 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
     `url=${page.url()}`
   );
 
-  // VI product page -> EN product page (path preserved)
+  // VI product page -> ZH product page (path preserved)
+  await page.locator('header a:has-text("中文")').first().click();
+  await page.waitForURL(`${BASE}/zh/shop/whole-bean-250g`);
+  log(
+    "VI product page -> ZH product page preserves path",
+    page.url() === `${BASE}/zh/shop/whole-bean-250g`,
+    `url=${page.url()}`
+  );
+
+  // ZH product page -> EN product page (path preserved)
   await page.locator('header a:has-text("EN")').first().click();
   await page.waitForURL(`${BASE}/shop/whole-bean-250g`);
   log(
-    "VI product page -> EN product page preserves path",
+    "ZH product page -> EN product page preserves path",
     page.url() === `${BASE}/shop/whole-bean-250g`,
     `url=${page.url()}`
   );
@@ -48,6 +62,17 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
   await page.locator('header a:has-text("EN")').first().click();
   await page.waitForURL(`${BASE}/cart`);
   log("VI cart page -> EN cart page preserves path", page.url() === `${BASE}/cart`, `url=${page.url()}`);
+
+  // ZH cart page -> VI cart page
+  await page.goto(`${BASE}/zh/cart`, { waitUntil: "load" });
+  await page.locator('header a:has-text("VI")').first().click();
+  await page.waitForURL(`${BASE}/vi/cart`);
+  log("ZH cart page -> VI cart page preserves path", page.url() === `${BASE}/vi/cart`, `url=${page.url()}`);
+
+  // Active locale is marked aria-current on the ZH home page
+  await page.goto(`${BASE}/zh`, { waitUntil: "load" });
+  const activeIsZh = await page.locator('header a:has-text("中文")').first().getAttribute("aria-current");
+  log("ZH pill marked aria-current on /zh", activeIsZh === "true", `aria-current=${activeIsZh}`);
 
   await page.close();
 }
@@ -60,6 +85,8 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
   await page.waitForTimeout(300);
   const mobileSwitcher = page.locator('[role="dialog"][aria-label="Menu"] a:has-text("VI")').first();
   log("Mobile menu shows language switcher", await mobileSwitcher.isVisible());
+  const mobileZhSwitcher = page.locator('[role="dialog"][aria-label="Menu"] a:has-text("中文")').first();
+  log("Mobile menu shows Chinese option", await mobileZhSwitcher.isVisible());
   await mobileSwitcher.click();
   await page.waitForURL(`${BASE}/vi`);
   log("Mobile switcher navigates EN -> VI", page.url() === `${BASE}/vi`, `url=${page.url()}`);

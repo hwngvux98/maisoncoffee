@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     languages: {
       en: "/cart",
       vi: "/vi/cart",
+      zh: "/zh/cart",
       "x-default": "/cart",
     },
   },

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { homeHref, localeHref, type Dictionary, type Locale } from "@/lib/i18n";
+import { CONTACT_EMAIL, INSTAGRAM_URL } from "@/lib/site";
 
 export function Footer({
   locale,
@@ -36,7 +37,7 @@ export function Footer({
                 href={localeHref(locale, "/shop")}
                 className="hover:text-cream-050"
               >
-                {locale === "vi" ? "Tất cả cà phê" : "All coffee"}
+                {dict.shopAllLink}
               </Link>
             </li>
             <li>
@@ -44,7 +45,7 @@ export function Footer({
                 href={localeHref(locale, "/cart")}
                 className="hover:text-cream-050"
               >
-                {locale === "vi" ? "Giỏ hàng" : "Cart"}
+                {dict.cartLink}
               </Link>
             </li>
           </ul>
@@ -57,7 +58,7 @@ export function Footer({
                 href={`${homeHref(locale)}#story`}
                 className="hover:text-cream-050"
               >
-                {locale === "vi" ? "Câu chuyện" : "Our story"}
+                {dict.ourStoryLink}
               </Link>
             </li>
             <li>
@@ -65,7 +66,7 @@ export function Footer({
                 href={`${homeHref(locale)}#roasting`}
                 className="hover:text-cream-050"
               >
-                {locale === "vi" ? "Rang xay" : "Roasting"}
+                {dict.roastingLink}
               </Link>
             </li>
             <li>
@@ -73,7 +74,7 @@ export function Footer({
                 href={`${homeHref(locale)}#wholesale`}
                 className="hover:text-cream-050"
               >
-                {locale === "vi" ? "Bán sỉ" : "Wholesale"}
+                {dict.wholesaleLink}
               </Link>
             </li>
           </ul>
@@ -83,13 +84,24 @@ export function Footer({
           <ul className="mt-4 flex flex-col gap-2 text-body-sm text-cream-050/80">
             <li>
               <a
-                href="mailto:hello@maisoncoffee.vn"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="hover:text-cream-050"
               >
-                hello@maisoncoffee.vn
+                {CONTACT_EMAIL}
               </a>
             </li>
-            <li>Mai Sơn, Sơn La, Vietnam</li>
+            <li>{dict.address}</li>
+            <li>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Maison Coffee on Instagram"
+                className="hover:text-cream-050"
+              >
+                Instagram
+              </a>
+            </li>
           </ul>
         </div>
       </Container>

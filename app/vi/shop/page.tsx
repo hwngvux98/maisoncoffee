@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     languages: {
       en: "/shop",
       vi: "/vi/shop",
+      zh: "/zh/shop",
       "x-default": "/shop",
     },
   },
