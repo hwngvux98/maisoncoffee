@@ -71,6 +71,14 @@ export function Footer({
             </li>
             <li>
               <Link
+                href={localeHref(locale, "/brewing-guides")}
+                className="hover:text-cream-050"
+              >
+                {dict.brewGuideLink}
+              </Link>
+            </li>
+            <li>
+              <Link
                 href={`${homeHref(locale)}#wholesale`}
                 className="hover:text-cream-050"
               >

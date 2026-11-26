@@ -31,6 +31,7 @@ export interface Dictionary {
     story: string;
     roasting: string;
     wholesale: string;
+    brewGuide: string;
     shop: string;
     cartLabel: string;
     menuLabel: string;
@@ -92,6 +93,7 @@ export interface Dictionary {
     cartLink: string;
     ourStoryLink: string;
     roastingLink: string;
+    brewGuideLink: string;
     wholesaleLink: string;
     address: string;
     copyright: string;
@@ -132,6 +134,22 @@ export interface Dictionary {
     quantityLabel: string;
     continueShopping: string;
   };
+  brewingGuides: {
+    heroHeading: string;
+    heroSubhead: string;
+    sectionHeading: string;
+    equipmentLabel: string;
+    specLabels: {
+      bean: string;
+      grind: string;
+      water: string;
+      temp: string;
+      time: string;
+    };
+    stepLabel: string;
+    otherMethodsHeading: string;
+    backToGuides: string;
+  };
   faq: FaqItem[];
 }
 
@@ -143,6 +161,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       story: "Our Story",
       roasting: "Roasting",
       wholesale: "Wholesale",
+      brewGuide: "Brew Guide",
       shop: "Shop",
       cartLabel: "Open cart",
       menuLabel: "Open menu",
@@ -250,6 +269,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       cartLink: "Cart",
       ourStoryLink: "Our story",
       roastingLink: "Roasting",
+      brewGuideLink: "Brew Guide",
       wholesaleLink: "Wholesale",
       address: "Mai Sơn, Sơn La, Vietnam",
       copyright: "© 2026 Maison Coffee · Mai Sơn, Sơn La, Vietnam",
@@ -291,6 +311,23 @@ export const dictionaries: Record<Locale, Dictionary> = {
       quantityLabel: "Quantity",
       continueShopping: "Continue shopping",
     },
+    brewingGuides: {
+      heroHeading: "Brew Maison coffee, your way",
+      heroSubhead:
+        "However you make your coffee, these are our house methods for getting the most out of every batch of Maison Specialty.",
+      sectionHeading: "Brew Guide",
+      equipmentLabel: "What you'll need",
+      specLabels: {
+        bean: "Coffee",
+        grind: "Grind size",
+        water: "Water",
+        temp: "Water temp",
+        time: "Brew time",
+      },
+      stepLabel: "Step",
+      otherMethodsHeading: "Other ways to brew",
+      backToGuides: "All brewing guides",
+    },
     faq: [
       {
         question: "Where is Maison Coffee grown?",
@@ -316,6 +353,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       story: "Câu chuyện",
       roasting: "Rang xay",
       wholesale: "Bán sỉ",
+      brewGuide: "Hướng dẫn pha",
       shop: "Cửa hàng",
       cartLabel: "Mở giỏ hàng",
       menuLabel: "Mở menu",
@@ -427,6 +465,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       cartLink: "Giỏ hàng",
       ourStoryLink: "Câu chuyện",
       roastingLink: "Rang xay",
+      brewGuideLink: "Hướng dẫn pha",
       wholesaleLink: "Bán sỉ",
       address: "Mai Sơn, Sơn La, Việt Nam",
       copyright: "© 2026 Maison Coffee · Mai Sơn, Sơn La, Việt Nam",
@@ -468,6 +507,23 @@ export const dictionaries: Record<Locale, Dictionary> = {
       quantityLabel: "Số lượng",
       continueShopping: "Tiếp tục mua sắm",
     },
+    brewingGuides: {
+      heroHeading: "Pha cà phê Maison theo cách của bạn",
+      heroSubhead:
+        "Dù bạn quen pha theo cách nào, đây là những phương pháp chúng tôi khuyên dùng để tận dụng trọn vẹn hương vị của mỗi mẻ Maison Specialty.",
+      sectionHeading: "Hướng dẫn pha",
+      equipmentLabel: "Dụng cụ cần chuẩn bị",
+      specLabels: {
+        bean: "Cà phê",
+        grind: "Độ xay",
+        water: "Lượng nước",
+        temp: "Nhiệt độ nước",
+        time: "Thời gian pha",
+      },
+      stepLabel: "Bước",
+      otherMethodsHeading: "Các cách pha khác",
+      backToGuides: "Tất cả hướng dẫn pha",
+    },
     faq: [
       {
         question: "Cà phê Maison được trồng ở đâu?",
@@ -493,6 +549,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       story: "品牌故事",
       roasting: "烘焙工艺",
       wholesale: "批发合作",
+      brewGuide: "冲煮指南",
       shop: "商店",
       cartLabel: "打开购物车",
       menuLabel: "打开菜单",
@@ -598,6 +655,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       cartLink: "购物车",
       ourStoryLink: "品牌故事",
       roastingLink: "烘焙工艺",
+      brewGuideLink: "冲煮指南",
       wholesaleLink: "批发合作",
       address: "越南山罗省梅山",
       copyright: "© 2026 Maison Coffee · 越南山罗省梅山",
@@ -637,6 +695,23 @@ export const dictionaries: Record<Locale, Dictionary> = {
       remove: "移除",
       quantityLabel: "数量",
       continueShopping: "继续选购",
+    },
+    brewingGuides: {
+      heroHeading: "用你喜欢的方式冲煮 Maison 咖啡",
+      heroSubhead:
+        "无论你习惯哪种冲煮方式,这些都是我们推荐的方法,帮你充分展现每一批 Maison Specialty 的风味。",
+      sectionHeading: "冲煮指南",
+      equipmentLabel: "所需器具",
+      specLabels: {
+        bean: "咖啡粉量",
+        grind: "研磨度",
+        water: "水量",
+        temp: "水温",
+        time: "冲煮时间",
+      },
+      stepLabel: "步骤",
+      otherMethodsHeading: "其他冲煮方式",
+      backToGuides: "查看全部冲煮指南",
     },
     faq: [
       {

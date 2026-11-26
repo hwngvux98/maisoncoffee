@@ -1,4 +1,5 @@
 import type { Product } from "@/lib/products";
+import type { BrewMethod } from "@/lib/brewing-guides";
 import type { FaqItem, Locale } from "@/lib/i18n";
 import { localeHref } from "@/lib/i18n";
 import { CONTACT_EMAIL, INSTAGRAM_URL, SITE_NAME, SITE_URL } from "@/lib/site";
@@ -58,6 +59,28 @@ export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
       position: index + 1,
       name: item.name,
       item: `${SITE_URL}${item.path}`,
+    })),
+  };
+}
+
+export function howToJsonLd(method: BrewMethod, locale: Locale) {
+  const path = localeHref(locale, `/brewing-guides/${method.slug}`);
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `How to brew ${method.name}`,
+    description: method.intro,
+    url: `${SITE_URL}${path}`,
+    totalTime: method.spec.time,
+    supply: method.equipment.map((item) => ({
+      "@type": "HowToSupply",
+      name: item,
+    })),
+    step: method.steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.title,
+      text: step.body,
     })),
   };
 }

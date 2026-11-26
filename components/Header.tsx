@@ -24,6 +24,7 @@ export function Header({
 
   const navLinks = [
     { label: dict.coffee, href: localeHref(locale, "/shop") },
+    { label: dict.brewGuide, href: localeHref(locale, "/brewing-guides") },
     { label: dict.story, href: `${homeHref(locale)}#story` },
     { label: dict.roasting, href: `${homeHref(locale)}#roasting` },
     { label: dict.wholesale, href: `${homeHref(locale)}#wholesale` },
