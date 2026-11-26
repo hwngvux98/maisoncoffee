@@ -36,6 +36,8 @@ export interface BrewMethod {
   tagline: string;
   intro: string;
   icon: BrewIcon;
+  image: string;
+  imageAlt: string;
   spec: BrewSpec;
   equipment: string[];
   steps: BrewStep[];
@@ -49,6 +51,8 @@ export const brewMethods: BrewMethod[] = [
     intro:
       "Hot water at roughly 9 bars of pressure forces through a tightly packed bed of fine grounds in under 30 seconds. Small in volume, big in concentration — the base for every milk drink too.",
     icon: "flame",
+    image: "/assets/brewing-guides/espresso.jpg",
+    imageAlt: "Espresso extracting from a portafilter into a shot glass",
     spec: {
       bean: "18g",
       grind: "Fine",
@@ -107,6 +111,8 @@ export const brewMethods: BrewMethod[] = [
     intro:
       "Hot water poured by hand over a bed of medium-fine grounds in a paper filter. Full control over pour speed and pattern means the cup can be tuned exactly to taste.",
     icon: "droplet",
+    image: "/assets/brewing-guides/pour-over.jpg",
+    imageAlt: "Pouring hot water from a gooseneck kettle over coffee grounds in a dripper",
     spec: {
       bean: "15g",
       grind: "Medium-fine",
@@ -155,6 +161,8 @@ export const brewMethods: BrewMethod[] = [
     intro:
       "Coarse grounds steep directly in hot water, then are separated with a mesh plunger. With no paper filter, more of the coffee's oils and body make it into the cup.",
     icon: "layers",
+    image: "/assets/brewing-guides/french-press.jpg",
+    imageAlt: "A French press on a wooden counter with coffee steeping inside",
     spec: {
       bean: "18g",
       grind: "Coarse",
@@ -198,6 +206,8 @@ export const brewMethods: BrewMethod[] = [
     intro:
       "Steam pressure pushes hot water up through finely ground coffee in this classic stovetop brewer, producing a bold, espresso-like cup without a machine.",
     icon: "flame",
+    image: "/assets/brewing-guides/moka-pot.jpg",
+    imageAlt: "A stovetop moka pot brewing on a gas burner",
     spec: {
       bean: "Fills the basket",
       grind: "Fine",
@@ -241,6 +251,8 @@ export const brewMethods: BrewMethod[] = [
     intro:
       "An automatic drip machine for easy, hands-off brewing at home — just add water and ground coffee, and let the machine do the rest.",
     icon: "coffee",
+    image: "/assets/brewing-guides/coffee-maker.jpg",
+    imageAlt: "An automatic drip coffee maker with a glass carafe",
     spec: {
       bean: "16g per cup",
       grind: "Medium",
@@ -289,6 +301,8 @@ export const brewMethods: BrewMethod[] = [
     intro:
       "A thick, bonded filter removes oils and fine particles for an especially clean, bright cup — and it works just as well brewed over ice.",
     icon: "snowflake",
+    image: "/assets/brewing-guides/chemex.jpg",
+    imageAlt: "Coffee brewing in a Chemex with the paper filter and wooden collar visible",
     spec: {
       bean: "18g",
       grind: "Medium",
@@ -337,6 +351,8 @@ export const brewMethods: BrewMethod[] = [
     intro:
       "Each sachet is pre-ground and sealed fresh, hooked straight over your cup — no grinder, scale, or extra gear needed.",
     icon: "coffee",
+    image: "/assets/brewing-guides/drip-bag.jpg",
+    imageAlt: "A single-serve coffee drip bag hooked over the rim of a cup",
     spec: {
       bean: "8g, pre-measured",
       grind: "Pre-ground",

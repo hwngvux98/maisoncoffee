@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { Container } from "@/components/Container";
@@ -49,8 +50,18 @@ export function BrewGuideDetailView({
           </nav>
 
           <div className="grid gap-12 lg:grid-cols-2">
-            <div className="flex aspect-[4/3] items-center justify-center rounded-md bg-green-700">
-              <BrewIconGlyph icon={method.icon} size={96} className="text-gold-300" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-green-700">
+              <Image
+                src={method.image}
+                alt={method.imageAlt}
+                fill
+                sizes="(min-width: 1024px) 560px, 90vw"
+                priority
+                className="object-cover"
+              />
+              <span className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-900/80 text-gold-300 backdrop-blur">
+                <BrewIconGlyph icon={method.icon} size={22} />
+              </span>
             </div>
 
             <div>
@@ -131,12 +142,17 @@ export function BrewGuideDetailView({
                   href={localeHref(locale, `/brewing-guides/${other.slug}`)}
                   className="group flex h-full flex-col overflow-hidden rounded-md bg-white shadow-md transition-transform duration-150 ease-brand hover:-translate-y-1"
                 >
-                  <div className="flex aspect-[4/3] items-center justify-center bg-green-700">
-                    <BrewIconGlyph
-                      icon={other.icon}
-                      size={40}
-                      className="text-gold-300 transition-transform duration-150 ease-brand group-hover:scale-110"
+                  <div className="relative aspect-[4/3] overflow-hidden bg-green-700">
+                    <Image
+                      src={other.image}
+                      alt={other.imageAlt}
+                      fill
+                      sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
+                      className="object-cover transition-transform duration-150 ease-brand group-hover:scale-105"
                     />
+                    <span className="absolute bottom-2 left-2 flex h-8 w-8 items-center justify-center rounded-full bg-green-900/80 text-gold-300 backdrop-blur">
+                      <BrewIconGlyph icon={other.icon} size={16} />
+                    </span>
                   </div>
                   <div className="flex flex-1 flex-col gap-1 p-5">
                     <h3 className="font-display text-heading-md text-green-700">
