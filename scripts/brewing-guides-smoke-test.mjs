@@ -25,7 +25,7 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
   log("Header nav link opens Brew Guide index", page.url() === `${BASE}/brewing-guides`);
 
   const cards = page.locator('main a[href^="/brewing-guides/"]');
-  log("7 method cards render", (await cards.count()) === 7, `count=${await cards.count()}`);
+  log("8 method cards render", (await cards.count()) === 8, `count=${await cards.count()}`);
 
   // Into a method detail page
   await page.goto(`${BASE}/brewing-guides/espresso`, { waitUntil: "load" });
@@ -62,7 +62,16 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
 
   await page.goto(`${BASE}/zh/brewing-guides`, { waitUntil: "load" });
   const zhCards = page.locator('main a[href^="/zh/brewing-guides/"]');
-  log("ZH index renders 7 cards", (await zhCards.count()) === 7, `count=${await zhCards.count()}`);
+  log("ZH index renders 8 cards", (await zhCards.count()) === 8, `count=${await zhCards.count()}`);
+
+  // Cold brew detail page
+  await page.goto(`${BASE}/brewing-guides/cold-brew`, { waitUntil: "load" });
+  log(
+    "Cold Brew heading renders",
+    (await page.locator("h1").first().textContent())?.includes("Cold Brew")
+  );
+  const coldBrewSteps = page.locator("h3.font-display");
+  log("6 cold brew steps render", (await coldBrewSteps.count()) >= 6, `count=${await coldBrewSteps.count()}`);
 
   log("No console errors", consoleErrors.length === 0, consoleErrors.join(" | "));
   await page.close();

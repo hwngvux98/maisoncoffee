@@ -15,6 +15,8 @@ import {
   Filter,
   Snowflake,
   Scissors,
+  Moon,
+  GlassWater,
 } from "lucide-react";
 import type { BrewIcon } from "@/lib/brewing-guides";
 
@@ -35,6 +37,8 @@ const icons = {
   filter: Filter,
   snowflake: Snowflake,
   scissors: Scissors,
+  moon: Moon,
+  glass: GlassWater,
 } satisfies Record<BrewIcon, typeof Coffee>;
 
 export function BrewIconGlyph({

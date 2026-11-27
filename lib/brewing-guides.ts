@@ -14,7 +14,9 @@ export type BrewIcon =
   | "flame"
   | "filter"
   | "snowflake"
-  | "scissors";
+  | "scissors"
+  | "moon"
+  | "glass";
 
 export interface BrewSpec {
   bean: string;
@@ -381,6 +383,56 @@ export const brewMethods: BrewMethod[] = [
         icon: "coffee",
         title: "Pour and serve",
         body: "Pour the rest of the water in two or three passes, then remove the bag and enjoy.",
+      },
+    ],
+  },
+  {
+    slug: "cold-brew",
+    name: "Cold Brew",
+    tagline: "Slow-steeped, smooth and sweet",
+    intro:
+      "Coarse grounds steep in cold or room-temperature water for up to a day, with no heat at all. The slow steep pulls out less acidity and bitterness, leaving a naturally sweet concentrate to dilute and pour over ice.",
+    icon: "moon",
+    image: "/assets/brewing-guides/cold-brew.jpg",
+    imageAlt: "A glass of cold brew coffee with ice on an outdoor café table",
+    spec: {
+      bean: "100g",
+      grind: "Coarse",
+      water: "1000ml",
+      temp: "Room temp or cold",
+      time: "16–24 hrs",
+    },
+    equipment: ["Large jar or pitcher", "Coarse grinder", "Paper filter or fine mesh strainer", "Scale"],
+    steps: [
+      {
+        icon: "settings",
+        title: "Grind",
+        body: "Grind 100g of beans coarse, about the texture of breadcrumbs.",
+      },
+      {
+        icon: "droplet",
+        title: "Combine",
+        body: "Add the grounds to a large jar or pitcher with 1000ml of room-temperature or cold water.",
+      },
+      {
+        icon: "hand",
+        title: "Stir",
+        body: "Stir gently so every ground is saturated, then cover.",
+      },
+      {
+        icon: "moon",
+        title: "Steep",
+        body: "Let it steep at room temperature or in the fridge for 16–24 hours.",
+      },
+      {
+        icon: "filter",
+        title: "Strain",
+        body: "Strain through a paper filter or fine mesh to remove all the grounds.",
+      },
+      {
+        icon: "glass",
+        title: "Dilute and serve",
+        body: "Cut the concentrate with water or milk to taste, and pour over ice.",
       },
     ],
   },
