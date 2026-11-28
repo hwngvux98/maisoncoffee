@@ -134,6 +134,15 @@ export interface Dictionary {
     quantityLabel: string;
     continueShopping: string;
   };
+  contactWidget: {
+    toggleLabel: string;
+    closeLabel: string;
+    zaloLabel: string;
+    whatsappLabel: string;
+    wechatLabel: string;
+    wechatModalTitle: string;
+    wechatModalBody: string;
+  };
   brewingGuides: {
     heroHeading: string;
     heroSubhead: string;
@@ -310,6 +319,15 @@ export const dictionaries: Record<Locale, Dictionary> = {
       remove: "Remove",
       quantityLabel: "Quantity",
       continueShopping: "Continue shopping",
+    },
+    contactWidget: {
+      toggleLabel: "Chat with us",
+      closeLabel: "Close",
+      zaloLabel: "Chat on Zalo",
+      whatsappLabel: "Chat on WhatsApp",
+      wechatLabel: "Add us on WeChat",
+      wechatModalTitle: "Scan to add us on WeChat",
+      wechatModalBody: "Open WeChat, tap Scan, and point your camera at this code.",
     },
     brewingGuides: {
       heroHeading: "Brew Maison coffee, your way",
@@ -507,6 +525,15 @@ export const dictionaries: Record<Locale, Dictionary> = {
       quantityLabel: "Số lượng",
       continueShopping: "Tiếp tục mua sắm",
     },
+    contactWidget: {
+      toggleLabel: "Nhắn tin cho chúng tôi",
+      closeLabel: "Đóng",
+      zaloLabel: "Nhắn tin qua Zalo",
+      whatsappLabel: "Nhắn tin qua WhatsApp",
+      wechatLabel: "Kết bạn qua WeChat",
+      wechatModalTitle: "Quét mã để kết bạn WeChat",
+      wechatModalBody: "Mở WeChat, chọn Quét (Scan) và đưa camera vào mã này.",
+    },
     brewingGuides: {
       heroHeading: "Pha cà phê Maison theo cách của bạn",
       heroSubhead:
@@ -695,6 +722,15 @@ export const dictionaries: Record<Locale, Dictionary> = {
       remove: "移除",
       quantityLabel: "数量",
       continueShopping: "继续选购",
+    },
+    contactWidget: {
+      toggleLabel: "联系我们",
+      closeLabel: "关闭",
+      zaloLabel: "通过 Zalo 联系",
+      whatsappLabel: "通过 WhatsApp 联系",
+      wechatLabel: "添加微信",
+      wechatModalTitle: "扫码添加微信",
+      wechatModalBody: "打开微信,点击扫一扫,对准下方二维码。",
     },
     brewingGuides: {
       heroHeading: "用你喜欢的方式冲煮 Maison 咖啡",

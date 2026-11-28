@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CartDrawer } from "@/components/CartDrawer";
+import { ContactWidget } from "@/components/ContactWidget";
 import { getDictionary, type Locale } from "@/lib/i18n";
 
 export function SiteChrome({ locale, children }: { locale: Locale; children: ReactNode }) {
@@ -12,6 +13,7 @@ export function SiteChrome({ locale, children }: { locale: Locale; children: Rea
       <main>{children}</main>
       <Footer locale={locale} dict={dict.footer} />
       <CartDrawer locale={locale} dict={dict.cart} />
+      <ContactWidget dict={dict.contactWidget} />
     </>
   );
 }
