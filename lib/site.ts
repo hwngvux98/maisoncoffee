@@ -1,6 +1,7 @@
 export const SITE_NAME = "Maison Coffee";
 export const CONTACT_EMAIL = "hungvu@maisoncoffeevn.com";
 export const INSTAGRAM_URL = "https://www.instagram.com/maisoncoffeevn";
+export const INSTAGRAM_DM_URL = "https://ig.me/m/maisoncoffeevn";
 
 export const ZALO_URL = "https://zalo.me/84354279988";
 export const WHATSAPP_URL = "https://wa.me/84354279988";

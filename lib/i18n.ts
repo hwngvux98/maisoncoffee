@@ -139,6 +139,7 @@ export interface Dictionary {
     closeLabel: string;
     zaloLabel: string;
     whatsappLabel: string;
+    instagramLabel: string;
     wechatLabel: string;
     wechatModalTitle: string;
     wechatModalBody: string;
@@ -325,6 +326,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       closeLabel: "Close",
       zaloLabel: "Chat on Zalo",
       whatsappLabel: "Chat on WhatsApp",
+      instagramLabel: "Message us on Instagram",
       wechatLabel: "Add us on WeChat",
       wechatModalTitle: "Scan to add us on WeChat",
       wechatModalBody: "Open WeChat, tap Scan, and point your camera at this code.",
@@ -530,6 +532,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       closeLabel: "Đóng",
       zaloLabel: "Nhắn tin qua Zalo",
       whatsappLabel: "Nhắn tin qua WhatsApp",
+      instagramLabel: "Nhắn tin qua Instagram",
       wechatLabel: "Kết bạn qua WeChat",
       wechatModalTitle: "Quét mã để kết bạn WeChat",
       wechatModalBody: "Mở WeChat, chọn Quét (Scan) và đưa camera vào mã này.",
@@ -728,6 +731,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       closeLabel: "关闭",
       zaloLabel: "通过 Zalo 联系",
       whatsappLabel: "通过 WhatsApp 联系",
+      instagramLabel: "通过 Instagram 私信",
       wechatLabel: "添加微信",
       wechatModalTitle: "扫码添加微信",
       wechatModalBody: "打开微信,点击扫一扫,对准下方二维码。",

@@ -34,6 +34,11 @@ const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromi
     "WhatsApp link points to wa.me",
     (await page.locator('a:has-text("Chat on WhatsApp")').getAttribute("href")) === "https://wa.me/84354279988"
   );
+  log(
+    "Instagram link points to ig.me",
+    (await page.locator('a:has-text("Message us on Instagram")').getAttribute("href")) ===
+      "https://ig.me/m/maisoncoffeevn"
+  );
 
   // WeChat opens a QR modal instead of navigating
   await page.locator('button:has-text("Add us on WeChat")').click();

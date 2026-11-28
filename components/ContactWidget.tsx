@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { MessageCircle, X } from "lucide-react";
 import { useOverlay } from "@/lib/use-overlay";
-import { ZALO_URL, WHATSAPP_URL, WECHAT_QR_IMAGE } from "@/lib/site";
+import { ZALO_URL, WHATSAPP_URL, INSTAGRAM_DM_URL, WECHAT_QR_IMAGE } from "@/lib/site";
 import type { Dictionary } from "@/lib/i18n";
 
 export function ContactWidget({ dict }: { dict: Dictionary["contactWidget"] }) {
@@ -36,15 +36,15 @@ export function ContactWidget({ dict }: { dict: Dictionary["contactWidget"] }) {
     <>
       <div ref={menuRef} className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
         {isOpen && (
-          <div className="flex flex-col items-end gap-2">
+          <div className="flex flex-col items-end gap-2.5">
             <a
               href={ZALO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-12 items-center gap-2 rounded-pill bg-white px-5 text-body-sm font-medium text-ink-900 shadow-md transition-transform duration-150 ease-brand hover:-translate-y-0.5"
+              className="flex h-14 items-center gap-2.5 rounded-pill bg-white px-5 text-body-md font-medium text-ink-900 shadow-md transition-transform duration-150 ease-brand hover:-translate-y-0.5"
             >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0068FF] text-white">
-                <MessageCircle size={14} strokeWidth={2} aria-hidden="true" />
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0068FF] text-white">
+                <MessageCircle size={17} strokeWidth={2} aria-hidden="true" />
               </span>
               {dict.zaloLabel}
             </a>
@@ -52,12 +52,23 @@ export function ContactWidget({ dict }: { dict: Dictionary["contactWidget"] }) {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-12 items-center gap-2 rounded-pill bg-white px-5 text-body-sm font-medium text-ink-900 shadow-md transition-transform duration-150 ease-brand hover:-translate-y-0.5"
+              className="flex h-14 items-center gap-2.5 rounded-pill bg-white px-5 text-body-md font-medium text-ink-900 shadow-md transition-transform duration-150 ease-brand hover:-translate-y-0.5"
             >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#25D366] text-white">
-                <MessageCircle size={14} strokeWidth={2} aria-hidden="true" />
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-white">
+                <MessageCircle size={17} strokeWidth={2} aria-hidden="true" />
               </span>
               {dict.whatsappLabel}
+            </a>
+            <a
+              href={INSTAGRAM_DM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-14 items-center gap-2.5 rounded-pill bg-white px-5 text-body-md font-medium text-ink-900 shadow-md transition-transform duration-150 ease-brand hover:-translate-y-0.5"
+            >
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-[#f09433] via-[#dc2743] to-[#bc1888] text-white">
+                <MessageCircle size={17} strokeWidth={2} aria-hidden="true" />
+              </span>
+              {dict.instagramLabel}
             </a>
             <button
               type="button"
@@ -65,10 +76,10 @@ export function ContactWidget({ dict }: { dict: Dictionary["contactWidget"] }) {
                 setIsWechatOpen(true);
                 setIsOpen(false);
               }}
-              className="flex h-12 items-center gap-2 rounded-pill bg-white px-5 text-body-sm font-medium text-ink-900 shadow-md transition-transform duration-150 ease-brand hover:-translate-y-0.5"
+              className="flex h-14 items-center gap-2.5 rounded-pill bg-white px-5 text-body-md font-medium text-ink-900 shadow-md transition-transform duration-150 ease-brand hover:-translate-y-0.5"
             >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#07C160] text-white">
-                <MessageCircle size={14} strokeWidth={2} aria-hidden="true" />
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#07C160] text-white">
+                <MessageCircle size={17} strokeWidth={2} aria-hidden="true" />
               </span>
               {dict.wechatLabel}
             </button>
@@ -79,12 +90,12 @@ export function ContactWidget({ dict }: { dict: Dictionary["contactWidget"] }) {
           onClick={() => setIsOpen((prev) => !prev)}
           aria-expanded={isOpen}
           aria-label={isOpen ? dict.closeLabel : dict.toggleLabel}
-          className="flex h-14 w-14 items-center justify-center rounded-full bg-green-700 text-cream-050 shadow-lg transition-transform duration-150 ease-brand hover:scale-105 hover:bg-green-800"
+          className="flex h-18 w-18 items-center justify-center rounded-full bg-green-700 text-cream-050 shadow-lg transition-transform duration-150 ease-brand hover:scale-105 hover:bg-green-800"
         >
           {isOpen ? (
-            <X size={24} strokeWidth={1.5} aria-hidden="true" />
+            <X size={30} strokeWidth={1.5} aria-hidden="true" />
           ) : (
-            <MessageCircle size={24} strokeWidth={1.5} aria-hidden="true" />
+            <MessageCircle size={30} strokeWidth={1.5} aria-hidden="true" />
           )}
         </button>
       </div>
